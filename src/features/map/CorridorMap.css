@@ -1,0 +1,91 @@
+.cm-root { position: relative; width: 100%; height: 100%; min-height: 420px; }
+.cm-map { position: absolute; inset: 0; }
+
+/* Layers button sits top-right, beside the zoom buttons, so it never covers the search panel. */
+.cm-layers-wrap {
+  position: absolute; top: 16px; right: 64px; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  max-width: calc(100% - 80px);
+}
+.cm-layers-toggle {
+  display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px;
+  background: var(--surface); color: var(--ink); border: none; border-radius: 999px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  box-shadow: var(--shadow-float);
+}
+.cm-layers-toggle:focus-visible { outline: none; box-shadow: var(--focus); }
+.cm-layers-on { font-weight: 500; color: var(--ink-3); }
+.cm-visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.cm-layers {
+  margin: 0; padding: 6px; min-width: 240px; box-sizing: border-box; border: none;
+  background: var(--surface); color: var(--ink); border-radius: var(--r-md);
+  box-shadow: var(--shadow-float);
+  font-size: 14px; line-height: 1.3;
+}
+.cm-layer-row {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px; min-height: 40px; box-sizing: border-box;
+  border-radius: var(--r-sm); cursor: pointer;
+}
+.cm-layer-row:hover { background: var(--ground); }
+.cm-layer-row input { width: 18px; height: 18px; margin: 0; accent-color: var(--river); }
+.cm-layer-row input:focus-visible { outline: 3px solid var(--river); outline-offset: 2px; }
+.cm-swatch {
+  display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+  color: #fff; font-size: 11px; font-weight: 700; flex: none;
+}
+.cm-count { color: var(--ink-3); margin-left: auto; padding-left: 8px; font-variant-numeric: tabular-nums; }
+
+/* MapLibre's own controls, restyled to match */
+.cm-root .maplibregl-ctrl-top-right { top: 6px; right: 6px; }
+.cm-root .maplibregl-ctrl-group {
+  border-radius: var(--r-md); box-shadow: var(--shadow-float); overflow: hidden;
+}
+.cm-root .maplibregl-ctrl-group:not(:empty) { box-shadow: var(--shadow-float); }
+.cm-root .maplibregl-ctrl-group button { width: 40px; height: 40px; }
+.recenter-btn { font-size: 18px; line-height: 1; color: var(--ink); }
+
+/* Popup for the selected pin */
+.cm-popup-wrap .maplibregl-popup-content {
+  padding: 12px 14px; border-radius: var(--r-md); box-shadow: var(--shadow-float);
+}
+.cm-popup { display: flex; flex-direction: column; gap: 2px; font-family: var(--font); color: var(--ink); }
+.cm-popup__type { font-size: 12px; font-weight: 700; }
+.cm-popup__name { font-size: 15px; font-weight: 700; line-height: 1.25; }
+.cm-popup__meta { font-size: 13px; color: var(--ink-2); }
+.cm-popup__demo { margin-top: 4px; font-size: 11px; color: var(--ink-3); }
+
+@media (max-width: 720px) {
+  .cm-layers-wrap { top: 12px; right: 60px; }
+}
+
+/* KAN-33: issue status steps in the popup */
+.cm-steps { display: flex; gap: 4px; margin: 6px 0 2px; padding: 0; list-style: none; }
+.cm-step { flex: 1; padding: 3px 4px; border: 1px solid #c5ced7; border-radius: 6px; text-align: center; font-size: 11px; color: var(--ink-3); background: #fff; }
+.cm-step--done { color: #007A5A; border-color: #007A5A; }
+.cm-step--current { font-weight: 700; color: #fff; background: #A33D78; border-color: #A33D78; }
+.cm-step--final { background: #007A5A; border-color: #007A5A; }
+
+/* Layers box note */
+.cm-layers-note { margin: 4px 10px 6px; max-width: 250px; font-size: 12px; line-height: 1.35; color: var(--ink-3); }
+
+/* Posts, offers and polls in the popup */
+.cm-popup__text { font-size: 13px; color: var(--ink); margin-top: 2px; }
+.cm-poll { margin-top: 6px; }
+.cm-vote-group { display: flex; flex-direction: column; gap: 6px; }
+.cm-vote {
+  min-height: 40px; padding: 6px 10px; text-align: left; font: inherit; font-size: 13px; font-weight: 600;
+  color: #5E3A9E; background: #fff; border: 1.5px solid #5E3A9E; border-radius: 8px; cursor: pointer;
+}
+.cm-vote:hover { background: #F1EBFA; }
+.cm-vote:focus-visible { outline: 3px solid var(--river); outline-offset: 2px; }
+.cm-poll__note { margin: 0 0 6px; font-size: 12px; font-weight: 600; color: var(--ink-2); }
+.cm-poll__note:focus-visible { outline: 3px solid var(--river); outline-offset: 2px; }
+.cm-results { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.cm-results li { display: grid; grid-template-columns: 1fr auto; column-gap: 8px; row-gap: 2px; font-size: 12px; }
+.cm-results__label { color: var(--ink); }
+.cm-results__num { font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.cm-bar { grid-column: 1 / -1; height: 6px; background: #E4E0EC; border-radius: 3px; overflow: hidden; }
+.cm-bar__fill { display: block; height: 100%; background: #5E3A9E; border-radius: 3px; }
+.cm-poll__total { margin: 6px 0 0; font-size: 11px; color: var(--ink-3); }

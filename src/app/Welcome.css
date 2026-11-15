@@ -1,0 +1,32 @@
+/* Sprint 6 (Purab): onboarding page */
+.wl-page { height: 100%; overflow-y: auto; box-sizing: border-box; padding: 28px 20px 40px; }
+.wl-inner { max-width: 1040px; margin: 0 auto; }
+.wl-eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); }
+.wl-title { margin: 6px 0 8px; font-size: 32px; font-weight: 800; letter-spacing: -0.02em; }
+.wl-lead { margin: 0 0 18px; max-width: 640px; color: var(--ink-2); font-size: 16px; }
+.wl-group h2 { margin: 22px 0 10px; font-size: 16px; font-weight: 800; color: var(--ink-2); }
+.wl-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.wl-card {
+  position: relative; display: flex; flex-direction: column; gap: 4px; width: 100%; height: 100%; box-sizing: border-box;
+  padding: 16px; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); color: var(--ink);
+  font: inherit; text-align: left; cursor: pointer;
+}
+.wl-card:hover { border-color: var(--river); }
+.wl-card:focus-visible { outline: none; box-shadow: var(--focus); }
+.wl-card.is-current { border-color: var(--river); background: var(--river-soft); }
+.wl-card-title { font-size: 17px; font-weight: 800; }
+.wl-card-name { font-size: 13px; color: var(--ink-2); }
+.wl-card-text { margin-top: 4px; font-size: 14px; color: var(--ink-2); }
+.wl-card-tag { position: absolute; top: 12px; right: 12px; padding: 1px 8px; border-radius: 999px; background: var(--river); color: #fff; font-size: 11px; font-weight: 800; }
+.wl-confirm { max-width: 560px; padding: 24px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); }
+.wl-confirm h2 { margin: 0; font-size: 24px; font-weight: 800; }
+.wl-confirm h2:focus { outline: none; }
+.wl-role { margin: 4px 0 10px; font-weight: 700; color: var(--river); }
+.wl-steps { list-style: none; margin: 14px 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.wl-steps li { display: grid; grid-template-columns: 140px 1fr; gap: 10px; font-size: 14px; }
+.wl-steps span { color: var(--moss); font-weight: 600; }
+.wl-actions { display: flex; gap: 8px; margin-top: 8px; }
+.wl-btn { min-height: 44px; padding: 0 20px; border: 1px solid #b9c3ca; border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.wl-btn--primary { border-color: var(--river); background: var(--river); color: #fff; }
+.wl-btn:focus-visible { outline: none; box-shadow: var(--focus); }
+@media (max-width: 720px) { .wl-title { font-size: 26px; } .wl-steps li { grid-template-columns: 1fr; gap: 0; } }

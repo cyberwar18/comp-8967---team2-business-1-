@@ -1,0 +1,12 @@
+KAN-43 School/education workspace: done (Devu)
+
+What was built:
+- School workspace inside the Community section: roadwork alert, two safe walking routes with crosswalks, notices and events for the public, all parents or one grade.
+- Public / Parent / Staff view. Only staff can post. Parents see only their notices. No student information anywhere.
+- New map layer "School safe routes": school area, routes (dashed and labelled when roadwork is near), crosswalks, school pin with the alert in its popup.
+- Roadwork alert uses public roadwork only (private BIA requests are never used).
+
+Evidence: 35 new tests (208 pass in total), build passes, screenshots 10-15 in docs/evidence/sprint-5/, notes in docs/KAN-43-school-workspace.md.
+
+Not done yet: axe-core scan of the new section, screen reader and real-phone checks.
+Next: those checks, then retake the map screenshot with the street map.

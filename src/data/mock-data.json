@@ -1,0 +1,2103 @@
+{
+  "meta": {
+    "title": "Neighbr shell mock data - Team 2 PinPoint",
+    "label": "ILLUSTRATIVE SAMPLE DATA. All names, places, events, people and coordinates are invented for the prototype. Not real businesses or records.",
+    "corridor": "Wyandotte St E, Thompson to Glidden (Olde Riverside, Windsor, Ontario)",
+    "coordinatesNote": "Pins placed along Wyandotte St E between 42.328108,-82.971001 (Thompson) and 42.329205,-82.965572 (Glidden). Positions of individual businesses are illustrative.",
+    "version": "0.1",
+    "updated": "2026-11-07",
+    "addressNote": "House numbers are illustrative, chosen to fit the real 5300-6100 block of Wyandotte St E between Thompson and Glidden.",
+    "profilesNote": "Owner and business are separate profiles: the business sits in the BIA corridor, the owner is a resident of the city. Resident reports go to the city or ward councillor (responder profiles), not the BIA.",
+    "communityNote": "KAN-42/48: community organizations, schools and institutions with members, roles, volunteer roles, events and service changes. Events stay private until an organizer approves them; approved events with a place, and library service changes, show on the shared map until they are over."
+  },
+  "chips": [
+    {
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "id": "shops",
+      "label": "Shops"
+    },
+    {
+      "id": "services",
+      "label": "Services"
+    },
+    {
+      "id": "community",
+      "label": "Community"
+    },
+    {
+      "id": "events",
+      "label": "Events"
+    },
+    {
+      "id": "updates",
+      "label": "Updates"
+    },
+    {
+      "id": "issues",
+      "label": "Issues"
+    },
+    {
+      "id": "vacant",
+      "label": "Vacant"
+    }
+  ],
+  "statuses": {
+    "place": [
+      "open",
+      "temporarily closed",
+      "vacant"
+    ],
+    "event": [
+      "upcoming",
+      "past"
+    ],
+    "update": [
+      "planned",
+      "published"
+    ],
+    "issue": [
+      "reported",
+      "acknowledged",
+      "resolved"
+    ]
+  },
+  "places": [
+    {
+      "id": "place-01",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Rosa's Bakery",
+      "category": "Bakery and cafe",
+      "status": "open",
+      "lat": 42.328051,
+      "lng": -82.970455,
+      "address": "5385 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Tue–Sun 7:00–16:00"
+    },
+    {
+      "id": "place-02",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Northside Books",
+      "category": "Bookshop",
+      "status": "open",
+      "lat": 42.328429,
+      "lng": -82.970244,
+      "address": "5420 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Tue–Sat 9:00–18:00"
+    },
+    {
+      "id": "place-03",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Corner Thread Tailors",
+      "category": "Tailor and alterations",
+      "status": "open",
+      "lat": 42.328193,
+      "lng": -82.969749,
+      "address": "5495 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Tue–Sat 9:00–18:00"
+    },
+    {
+      "id": "place-04",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Riverbend Hardware",
+      "category": "Hardware store",
+      "status": "open",
+      "lat": 42.328582,
+      "lng": -82.969484,
+      "address": "5530 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Tue–Sat 9:00–18:00"
+    },
+    {
+      "id": "place-05",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Maple & Rye Diner",
+      "category": "Restaurant",
+      "status": "open",
+      "lat": 42.328347,
+      "lng": -82.968989,
+      "address": "5595 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Daily 7:00–15:00"
+    },
+    {
+      "id": "place-06",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Glidden Grocer",
+      "category": "Grocery",
+      "status": "open",
+      "lat": 42.328725,
+      "lng": -82.968778,
+      "address": "5630 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Tue–Sat 9:00–18:00"
+    },
+    {
+      "id": "place-07",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Bloom Room Florist",
+      "category": "Florist",
+      "status": "temporarily closed",
+      "lat": 42.32849,
+      "lng": -82.968283,
+      "address": "5705 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Closed until Oct 20"
+    },
+    {
+      "id": "place-08",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Second Spin Cycles",
+      "category": "Bike shop",
+      "status": "open",
+      "lat": 42.328867,
+      "lng": -82.968073,
+      "address": "5740 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Tue–Sat 9:00–18:00"
+    },
+    {
+      "id": "place-09",
+      "kind": "place",
+      "chip": "shops",
+      "name": "Lantern Tea House",
+      "category": "Cafe",
+      "status": "open",
+      "lat": 42.328632,
+      "lng": -82.967577,
+      "address": "5805 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Tue–Sat 9:00–18:00"
+    },
+    {
+      "id": "place-10",
+      "kind": "place",
+      "chip": "services",
+      "name": "Wyandotte Pharmacy (demo)",
+      "category": "Pharmacy",
+      "status": "open",
+      "lat": 42.329021,
+      "lng": -82.967313,
+      "address": "5840 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Mon–Fri 9:00–17:00"
+    },
+    {
+      "id": "place-11",
+      "kind": "place",
+      "chip": "services",
+      "name": "Riverside Dental Studio (demo)",
+      "category": "Dental clinic",
+      "status": "open",
+      "lat": 42.328775,
+      "lng": -82.966872,
+      "address": "5905 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Mon–Fri 9:00–17:00"
+    },
+    {
+      "id": "place-12",
+      "kind": "place",
+      "chip": "community",
+      "name": "Corridor Community Hall",
+      "category": "Community space",
+      "status": "open",
+      "lat": 42.329164,
+      "lng": -82.966607,
+      "address": "5950 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Daily 8:00–20:00"
+    },
+    {
+      "id": "place-13",
+      "kind": "place",
+      "chip": "community",
+      "name": "Thompson Parkette",
+      "category": "Park",
+      "status": "open",
+      "lat": 42.328319,
+      "lng": -82.970787,
+      "address": "5350 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Open all day"
+    },
+    {
+      "id": "place-14",
+      "kind": "place",
+      "chip": "vacant",
+      "name": "Storefront near Glidden",
+      "category": "Vacant storefront",
+      "status": "vacant",
+      "lat": 42.329306,
+      "lng": -82.965901,
+      "address": "6050 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": null
+    },
+    {
+      "id": "place-15",
+      "kind": "place",
+      "chip": "community",
+      "name": "Olde Riverside BIA Office (demo)",
+      "category": "BIA office",
+      "status": "open",
+      "lat": 42.328928,
+      "lng": -82.966112,
+      "address": "6015 Wyandotte St E (illustrative)",
+      "description": "Illustrative sample place for the prototype.",
+      "illustrative": true,
+      "hours": "Daily 8:00–20:00"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-01",
+      "kind": "event",
+      "chip": "events",
+      "name": "Friday Market",
+      "category": "Community market",
+      "status": "upcoming",
+      "start": "2026-11-27T16:00",
+      "end": "2026-11-27T20:00",
+      "lat": 42.329244,
+      "lng": -82.966485,
+      "placeId": "place-12",
+      "illustrative": true,
+      "orgId": "org-rnn"
+    },
+    {
+      "id": "event-02",
+      "kind": "event",
+      "chip": "events",
+      "name": "Fall Garden Clean-up",
+      "category": "Volunteer event",
+      "status": "upcoming",
+      "start": "2026-11-28T10:00",
+      "end": "2026-11-28T12:00",
+      "lat": 42.328399,
+      "lng": -82.970666,
+      "placeId": "place-13",
+      "illustrative": true,
+      "orgId": "org-rnn"
+    },
+    {
+      "id": "event-03",
+      "kind": "event",
+      "chip": "events",
+      "name": "Story Hour at Northside Books",
+      "category": "Family event",
+      "status": "upcoming",
+      "start": "2026-11-29T11:00",
+      "end": "2026-11-29T12:00",
+      "lat": 42.328509,
+      "lng": -82.970123,
+      "placeId": "place-02",
+      "illustrative": true
+    },
+    {
+      "id": "event-04",
+      "kind": "event",
+      "chip": "events",
+      "name": "Bike Tune-up Morning",
+      "category": "Workshop",
+      "status": "upcoming",
+      "start": "2026-12-05T09:00",
+      "end": "2026-12-05T12:00",
+      "lat": 42.328948,
+      "lng": -82.967951,
+      "placeId": "place-08",
+      "illustrative": true
+    },
+    {
+      "id": "event-05",
+      "kind": "event",
+      "chip": "events",
+      "name": "Corridor Lights Walk",
+      "category": "Community walk",
+      "status": "past",
+      "start": "2026-10-03T18:00",
+      "end": "2026-10-03T19:30",
+      "lat": 42.328609,
+      "lng": -82.967417,
+      "placeId": "place-09",
+      "illustrative": true
+    }
+  ],
+  "updates": [
+    {
+      "id": "update-01",
+      "kind": "update",
+      "chip": "updates",
+      "name": "Sidewalk work on Wyandotte St E",
+      "category": "Roadworks",
+      "status": "published",
+      "description": "4 shops are still open; use the side street.",
+      "lat": 42.328139,
+      "lng": -82.970664,
+      "reportedBy": "profile-bia",
+      "placeId": "place-01",
+      "visibility": "public",
+      "updatedAt": "2026-10-07",
+      "illustrative": true
+    },
+    {
+      "id": "update-02",
+      "kind": "update",
+      "chip": "updates",
+      "name": "New benches installed",
+      "category": "Streetscape",
+      "status": "published",
+      "description": "Six benches added between the hall and the parkette.",
+      "lat": 42.328986,
+      "lng": -82.966658,
+      "reportedBy": "profile-bia",
+      "placeId": null,
+      "visibility": "public",
+      "updatedAt": "2026-10-07",
+      "illustrative": true
+    },
+    {
+      "id": "update-03",
+      "kind": "update",
+      "chip": "updates",
+      "name": "Holiday lights going up next week",
+      "category": "Streetscape",
+      "status": "planned",
+      "description": "Crews will work on weekday mornings.",
+      "lat": 42.328678,
+      "lng": -82.968178,
+      "reportedBy": "profile-bia",
+      "placeId": null,
+      "visibility": "public",
+      "updatedAt": "2026-10-07",
+      "illustrative": true
+    },
+    {
+      "id": "issue-04",
+      "kind": "issue",
+      "chip": "issues",
+      "name": "Sidewalk closed in front of the bakery",
+      "category": "Roadworks and access",
+      "status": "acknowledged",
+      "description": "Customers think the shop is shut.",
+      "lat": 42.328096,
+      "lng": -82.970598,
+      "reportedBy": "profile-business",
+      "placeId": "place-01",
+      "visibility": "private until approved",
+      "updatedAt": "2026-10-07",
+      "illustrative": true
+    },
+    {
+      "id": "issue-05",
+      "kind": "issue",
+      "chip": "issues",
+      "name": "Streetlight out near the pharmacy",
+      "category": "Maintenance",
+      "status": "reported",
+      "description": "Light has been off for three nights.",
+      "lat": 42.328928,
+      "lng": -82.967404,
+      "reportedBy": "profile-resident",
+      "placeId": "place-10",
+      "visibility": "private until approved",
+      "updatedAt": "2026-10-07",
+      "illustrative": true,
+      "routedTo": "City of Windsor / ward councillor (demo)",
+      "routedToProfile": "profile-city",
+      "ccProfile": "profile-councillor"
+    },
+    {
+      "id": "issue-06",
+      "kind": "issue",
+      "chip": "issues",
+      "name": "Northside Books has a new address",
+      "category": "Business moved",
+      "status": "resolved",
+      "description": "Directory updated after the BIA confirmed the move.",
+      "lat": 42.328336,
+      "lng": -82.970336,
+      "reportedBy": "profile-business",
+      "placeId": "place-02",
+      "visibility": "public",
+      "updatedAt": "2026-10-07",
+      "illustrative": true
+    },
+    {
+      "id": "issue-07",
+      "kind": "issue",
+      "chip": "issues",
+      "name": "Faded crosswalk at Thompson",
+      "category": "Roads",
+      "status": "resolved",
+      "description": "Outcome: Crosswalk repainted on Oct 20. The City will check the lines again in the spring.",
+      "lat": 42.328379,
+      "lng": -82.970787,
+      "reportedBy": "profile-resident-maya",
+      "placeId": "place-13",
+      "visibility": "public",
+      "updatedAt": "2026-10-21",
+      "routedTo": "City of Windsor 311 (demo)",
+      "routedToProfile": "profile-city",
+      "illustrative": true
+    },
+    {
+      "id": "issue-08",
+      "kind": "issue",
+      "chip": "issues",
+      "name": "Street light out near Glidden Grocer",
+      "category": "Street lights",
+      "status": "resolved",
+      "description": "Outcome: New bulb fitted on Nov 2. The light now stays on all night.",
+      "lat": 42.328785,
+      "lng": -82.968778,
+      "reportedBy": "profile-resident-chris",
+      "placeId": "place-06",
+      "visibility": "public",
+      "updatedAt": "2026-11-03",
+      "routedTo": "City of Windsor 311 (demo)",
+      "routedToProfile": "profile-city",
+      "illustrative": true
+    }
+  ],
+  "profiles": [
+    {
+      "id": "profile-resident",
+      "kind": "profile",
+      "role": "resident",
+      "name": "Team 2 Group 10",
+      "badge": "Resident",
+      "area": "Olde Riverside",
+      "bio": "Neighbour, designer and weekend gardener.",
+      "interests": [
+        "Gardening",
+        "Walkable cities",
+        "Local markets"
+      ],
+      "skills": [
+        "Visual design"
+      ],
+      "public": [
+        "name",
+        "bio",
+        "interests",
+        "skills",
+        "area"
+      ],
+      "private": [
+        "home address",
+        "contact details"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-business",
+      "kind": "profile",
+      "role": "business",
+      "name": "Rosa's Bakery",
+      "placeId": "place-01",
+      "owner": "Rosa (demo owner)",
+      "bio": "Family bakery and cafe.",
+      "public": [
+        "name",
+        "hours",
+        "location",
+        "offers"
+      ],
+      "private": [
+        "owner identity",
+        "request history"
+      ],
+      "illustrative": true,
+      "ownerProfileId": "profile-owner-rosa"
+    },
+    {
+      "id": "profile-bia",
+      "kind": "profile",
+      "role": "bia",
+      "name": "Olde Riverside BIA (demo)",
+      "placeId": "place-15",
+      "area": "Wyandotte St E, Thompson to Glidden",
+      "bio": "Business Improvement Area for the corridor.",
+      "public": [
+        "corridor area",
+        "approved notices",
+        "member directory"
+      ],
+      "private": [
+        "inbox",
+        "internal notes",
+        "board summary drafts"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-ngo",
+      "kind": "profile",
+      "role": "ngo",
+      "name": "Riverside Neighbours Network (demo)",
+      "placeId": "place-12",
+      "area": "Olde Riverside",
+      "bio": "Volunteer group running clean-ups and community events.",
+      "public": [
+        "name",
+        "programs",
+        "events"
+      ],
+      "private": [
+        "volunteer contact list"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-owner-rosa",
+      "kind": "profile",
+      "role": "resident",
+      "name": "Rosa Alvarez (demo)",
+      "badge": "Resident",
+      "area": "City of Windsor",
+      "bio": "Runs a family bakery on Wyandotte St E. Likes the winter market and community clean-ups.",
+      "interests": [
+        "Local markets",
+        "Baking",
+        "Community events"
+      ],
+      "ownsPlaceIds": [
+        "place-01"
+      ],
+      "public": [
+        "name",
+        "bio",
+        "interests",
+        "area"
+      ],
+      "private": [
+        "home address",
+        "contact details",
+        "which business they own"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-councillor",
+      "kind": "profile",
+      "role": "councillor",
+      "name": "Ward Councillor (demo)",
+      "badge": "Ward councillor",
+      "area": "Demo ward area",
+      "wardId": "ward-demo",
+      "bio": "Elected representative for the ward. Receives resident reports about local problems in the ward.",
+      "handles": [
+        "street lights",
+        "potholes",
+        "sidewalks",
+        "snow clearing",
+        "parks"
+      ],
+      "public": [
+        "name",
+        "ward area",
+        "office hours",
+        "public responses to reports"
+      ],
+      "private": [
+        "inbox",
+        "resident contact details",
+        "internal notes"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-city",
+      "kind": "profile",
+      "role": "city",
+      "name": "City of Windsor 311 (demo)",
+      "badge": "City service",
+      "area": "City of Windsor",
+      "bio": "City service desk. Takes reports about roads, lights, garbage and bylaw issues and sends them to the right department.",
+      "handles": [
+        "potholes",
+        "street lights",
+        "garbage and recycling",
+        "bylaw",
+        "road closures"
+      ],
+      "public": [
+        "name",
+        "service area",
+        "report status"
+      ],
+      "private": [
+        "case notes",
+        "staff names",
+        "resident contact details"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-mp",
+      "kind": "profile",
+      "role": "mp",
+      "name": "Member of Parliament (demo)",
+      "badge": "MP",
+      "area": "Federal riding (demo)",
+      "bio": "Federal representative for the riding. Handles federal matters for constituents, not local repairs.",
+      "handles": [
+        "federal programs",
+        "immigration and passports",
+        "benefits"
+      ],
+      "public": [
+        "name",
+        "riding",
+        "public statements"
+      ],
+      "private": [
+        "constituent casework",
+        "contact details"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-resident-maya",
+      "kind": "profile",
+      "role": "resident",
+      "name": "Maya R. (demo)",
+      "badge": "Resident",
+      "area": "Olde Riverside",
+      "bio": "Parent of a Grade 2 student at Riverside Public School.",
+      "public": [
+        "name",
+        "badge",
+        "area",
+        "bio"
+      ],
+      "private": [
+        "home address",
+        "child's name and grade"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "profile-school",
+      "kind": "profile",
+      "role": "school",
+      "name": "Riverside Public School (demo)",
+      "badge": "School",
+      "area": "Olde Riverside",
+      "bio": "Elementary school near the corridor.",
+      "orgId": "org-school",
+      "public": [
+        "name",
+        "area",
+        "public notices"
+      ],
+      "private": [
+        "student information",
+        "parent contact details"
+      ],
+      "illustrative": true,
+      "placeId": null
+    },
+    {
+      "id": "profile-library",
+      "kind": "profile",
+      "role": "institution",
+      "name": "Riverside Branch Library (demo)",
+      "badge": "Institution",
+      "area": "Olde Riverside",
+      "bio": "Public library branch near the corridor.",
+      "orgId": "org-library",
+      "public": [
+        "name",
+        "area",
+        "hours",
+        "announcements"
+      ],
+      "private": [
+        "member contact details"
+      ],
+      "illustrative": true
+    }
+  ],
+  "offers": [
+    {
+      "id": "offer-01",
+      "kind": "offer",
+      "name": "Sidewalk-work special: 2 coffees for $5",
+      "placeId": "place-01",
+      "validUntil": "2026-10-31",
+      "description": "Thanks for finding us during the sidewalk work.",
+      "illustrative": true
+    },
+    {
+      "id": "offer-02",
+      "kind": "offer",
+      "name": "10% off fall bulbs",
+      "placeId": "place-04",
+      "validUntil": "2026-10-25",
+      "description": "Show the app at the counter.",
+      "illustrative": true
+    },
+    {
+      "id": "offer-03",
+      "kind": "offer",
+      "name": "Free tire check with any tune-up",
+      "placeId": "place-08",
+      "validUntil": "2026-10-24",
+      "description": "Pairs with Bike Tune-up Morning.",
+      "illustrative": true
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-01",
+      "kind": "post",
+      "name": "Snow shovels and salt are in stock",
+      "category": "Business post",
+      "status": "published",
+      "placeId": "place-04",
+      "reportedBy": "profile-business",
+      "visibility": "public",
+      "description": "First-snow supplies are on the front shelf.",
+      "updatedAt": "2026-10-19",
+      "illustrative": true
+    },
+    {
+      "id": "post-02",
+      "kind": "post",
+      "name": "Holiday wreath pre-orders are open",
+      "category": "Business post",
+      "status": "published",
+      "placeId": "place-07",
+      "reportedBy": "profile-business",
+      "visibility": "public",
+      "description": "Order now and pick up in the first week of December.",
+      "updatedAt": "2026-10-19",
+      "illustrative": true
+    },
+    {
+      "id": "post-03",
+      "kind": "post",
+      "name": "Draft: December sale on holiday boxes",
+      "category": "Business post",
+      "status": "draft",
+      "placeId": "place-01",
+      "reportedBy": "profile-business",
+      "to": "profile-bia",
+      "visibility": "private until approved",
+      "description": "Sent to the BIA for approval. Not public yet.",
+      "updatedAt": "2026-10-19",
+      "illustrative": true
+    }
+  ],
+  "polls": [
+    {
+      "id": "poll-01",
+      "kind": "poll",
+      "name": "Which weekend should the winter market run?",
+      "category": "BIA poll",
+      "status": "open",
+      "placeId": "place-15",
+      "reportedBy": "profile-bia",
+      "visibility": "public",
+      "closesOn": "2026-11-06",
+      "description": "One vote each. This is a demo, so votes are not saved.",
+      "options": [
+        {
+          "id": "a",
+          "label": "Fri Nov 27",
+          "votes": 12
+        },
+        {
+          "id": "b",
+          "label": "Sat Nov 28",
+          "votes": 21
+        },
+        {
+          "id": "c",
+          "label": "Sun Nov 29",
+          "votes": 9
+        }
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "poll-02",
+      "kind": "poll",
+      "name": "Should the new benches stay out through winter?",
+      "category": "BIA poll",
+      "status": "closed",
+      "placeId": null,
+      "lat": 42.32907,
+      "lng": -82.96676,
+      "reportedBy": "profile-bia",
+      "visibility": "public",
+      "closesOn": "2026-10-12",
+      "description": "This poll has closed. Results are final.",
+      "options": [
+        {
+          "id": "a",
+          "label": "Yes",
+          "votes": 31
+        },
+        {
+          "id": "b",
+          "label": "No",
+          "votes": 4
+        },
+        {
+          "id": "c",
+          "label": "Not sure",
+          "votes": 6
+        }
+      ],
+      "illustrative": true
+    }
+  ],
+  "wards": [
+    {
+      "id": "ward-demo",
+      "kind": "ward",
+      "name": "Demo ward area",
+      "note": "Resident reports like potholes and street lights go to the city or the ward councillor, not the BIA.",
+      "responsible": "City of Windsor / ward councillor (demo)",
+      "polygon": [
+        [
+          -82.9722,
+          42.3272
+        ],
+        [
+          -82.964,
+          42.3272
+        ],
+        [
+          -82.964,
+          42.3304
+        ],
+        [
+          -82.9722,
+          42.3304
+        ],
+        [
+          -82.9722,
+          42.3272
+        ]
+      ],
+      "labelAt": [
+        -82.9681,
+        42.3272
+      ],
+      "illustrative": true,
+      "responsibleProfiles": [
+        "profile-councillor",
+        "profile-city"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org-rnn",
+      "kind": "organization",
+      "type": "community",
+      "typeLabel": "Community organization",
+      "name": "Riverside Neighbours Network (demo)",
+      "profileId": "profile-ngo",
+      "placeId": "place-12",
+      "area": "Olde Riverside",
+      "about": "Volunteer group running clean-ups, the Friday Market and other community events along the corridor.",
+      "public": [
+        "name",
+        "about",
+        "public events",
+        "volunteer roles"
+      ],
+      "private": [
+        "member contact details",
+        "pending events",
+        "sign-up list"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "org-foodbank",
+      "kind": "organization",
+      "type": "foodbank",
+      "typeLabel": "Food bank",
+      "name": "Olde Riverside Food Bank (demo)",
+      "profileId": null,
+      "placeId": "place-12",
+      "area": "Olde Riverside",
+      "about": "Weekly food hampers and a community pantry, run from the community hall.",
+      "public": [
+        "name",
+        "about",
+        "opening hours",
+        "public events",
+        "volunteer roles"
+      ],
+      "private": [
+        "client names",
+        "member contact details",
+        "pending events"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "org-school",
+      "kind": "organization",
+      "type": "school",
+      "typeLabel": "School",
+      "name": "Riverside Public School (demo)",
+      "profileId": "profile-school",
+      "placeId": null,
+      "area": "Olde Riverside",
+      "about": "Elementary school. Shares family events and asks parents to help on trips and fun fairs.",
+      "public": [
+        "name",
+        "about",
+        "public events",
+        "volunteer roles"
+      ],
+      "private": [
+        "student names",
+        "parent contact details",
+        "pending events"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "org-library",
+      "kind": "organization",
+      "type": "institution",
+      "typeLabel": "Institution",
+      "name": "Riverside Branch Library (demo)",
+      "profileId": "profile-library",
+      "placeId": null,
+      "area": "Olde Riverside",
+      "about": "Public library branch. Runs reading clubs, tech help and homework help.",
+      "public": [
+        "name",
+        "about",
+        "opening hours",
+        "service changes",
+        "public events",
+        "volunteer roles"
+      ],
+      "private": [
+        "member contact details",
+        "pending events"
+      ],
+      "illustrative": true,
+      "location": {
+        "lat": 42.32938,
+        "lng": -82.96528
+      }
+    }
+  ],
+  "orgMembers": [
+    {
+      "id": "mem-01",
+      "kind": "member",
+      "orgId": "org-rnn",
+      "profileId": "profile-resident",
+      "name": "Team 2 Group 10",
+      "role": "volunteer",
+      "skills": [
+        "Gardening",
+        "Local markets"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-02",
+      "kind": "member",
+      "orgId": "org-rnn",
+      "profileId": null,
+      "name": "Priya Nair (demo)",
+      "role": "organizer",
+      "skills": [
+        "Event planning",
+        "Fundraising"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-03",
+      "kind": "member",
+      "orgId": "org-rnn",
+      "profileId": null,
+      "name": "Daniel Okafor (demo)",
+      "role": "coordinator",
+      "skills": [
+        "Clean-ups",
+        "Logistics"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-04",
+      "kind": "member",
+      "orgId": "org-rnn",
+      "profileId": null,
+      "name": "Grace Liu (demo)",
+      "role": "volunteer",
+      "skills": [
+        "Gardening",
+        "Photography"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-05",
+      "kind": "member",
+      "orgId": "org-rnn",
+      "profileId": null,
+      "name": "Marco Russo (demo)",
+      "role": "member",
+      "skills": [
+        "Walkable cities"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-06",
+      "kind": "member",
+      "orgId": "org-rnn",
+      "profileId": "profile-owner-rosa",
+      "name": "Rosa Alvarez (demo)",
+      "role": "member",
+      "skills": [
+        "Local markets",
+        "Baking"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-07",
+      "kind": "member",
+      "orgId": "org-foodbank",
+      "profileId": null,
+      "name": "Aisha Rahman (demo)",
+      "role": "organizer",
+      "skills": [
+        "Food safety",
+        "Scheduling"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-08",
+      "kind": "member",
+      "orgId": "org-foodbank",
+      "profileId": "profile-resident",
+      "name": "Team 2 Group 10",
+      "role": "volunteer",
+      "skills": [
+        "Sorting",
+        "Driving"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-09",
+      "kind": "member",
+      "orgId": "org-foodbank",
+      "profileId": null,
+      "name": "Tom Becker (demo)",
+      "role": "volunteer",
+      "skills": [
+        "Driving",
+        "Lifting"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-10",
+      "kind": "member",
+      "orgId": "org-school",
+      "profileId": null,
+      "name": "Ms. Laurent (demo)",
+      "role": "organizer",
+      "skills": [
+        "Teaching",
+        "Field trips"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-11",
+      "kind": "member",
+      "orgId": "org-school",
+      "profileId": null,
+      "name": "Kevin Park (demo)",
+      "role": "volunteer",
+      "skills": [
+        "First aid"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-12",
+      "kind": "member",
+      "orgId": "org-library",
+      "profileId": null,
+      "name": "Sofia Mendes (demo)",
+      "role": "organizer",
+      "skills": [
+        "Reading clubs",
+        "Tech help"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "mem-13",
+      "kind": "member",
+      "orgId": "org-library",
+      "profileId": null,
+      "name": "Ahmed Hassan (demo)",
+      "role": "coordinator",
+      "skills": [
+        "Homework help"
+      ],
+      "joined": "2026-09",
+      "public": [
+        "name",
+        "role",
+        "skills"
+      ],
+      "private": [
+        "contact details",
+        "home address"
+      ],
+      "illustrative": true
+    }
+  ],
+  "volunteerRoles": [
+    {
+      "id": "vol-01",
+      "kind": "volunteer-role",
+      "orgId": "org-rnn",
+      "title": "Garden clean-up helper",
+      "date": "2026-11-28",
+      "start": "10:00",
+      "end": "12:00",
+      "placeId": "place-13",
+      "spots": 8,
+      "signedUp": [
+        "mem-04",
+        "mem-05"
+      ],
+      "description": "Rake leaves and plant bulbs at the parkette. Gloves provided.",
+      "illustrative": true
+    },
+    {
+      "id": "vol-02",
+      "kind": "volunteer-role",
+      "orgId": "org-rnn",
+      "title": "Friday Market setup",
+      "date": "2026-11-27",
+      "start": "15:00",
+      "end": "16:00",
+      "placeId": "place-12",
+      "spots": 4,
+      "signedUp": [
+        "mem-03",
+        "mem-04",
+        "mem-05",
+        "mem-06"
+      ],
+      "description": "Set up tables and signs before the market opens.",
+      "illustrative": true
+    },
+    {
+      "id": "vol-03",
+      "kind": "volunteer-role",
+      "orgId": "org-rnn",
+      "title": "Winter coat drive sorter",
+      "date": "2026-11-14",
+      "start": "13:00",
+      "end": "16:00",
+      "placeId": "place-12",
+      "spots": 6,
+      "signedUp": [
+        "mem-02"
+      ],
+      "description": "Sort donated coats by size before they go out.",
+      "illustrative": true
+    },
+    {
+      "id": "vol-04",
+      "kind": "volunteer-role",
+      "orgId": "org-foodbank",
+      "title": "Hamper packer",
+      "date": "2026-11-05",
+      "start": "09:00",
+      "end": "12:00",
+      "placeId": "place-12",
+      "spots": 5,
+      "signedUp": [
+        "mem-09"
+      ],
+      "description": "Pack weekly food hampers.",
+      "illustrative": true
+    },
+    {
+      "id": "vol-05",
+      "kind": "volunteer-role",
+      "orgId": "org-school",
+      "title": "Fun fair helper",
+      "date": "2026-11-20",
+      "start": "17:00",
+      "end": "19:00",
+      "placeId": null,
+      "spots": 10,
+      "signedUp": [
+        "mem-11"
+      ],
+      "description": "Run a game booth at the school fun fair.",
+      "illustrative": true
+    },
+    {
+      "id": "vol-06",
+      "kind": "volunteer-role",
+      "orgId": "org-library",
+      "title": "Homework help tutor",
+      "date": "2026-11-10",
+      "start": "16:00",
+      "end": "17:30",
+      "placeId": null,
+      "spots": 3,
+      "signedUp": [],
+      "description": "Help Grade 4–8 students with homework.",
+      "illustrative": true
+    }
+  ],
+  "orgEvents": [
+    {
+      "id": "oe-01",
+      "kind": "org-event",
+      "orgId": "org-rnn",
+      "name": "Winter coat drive",
+      "category": "Donation drive",
+      "start": "2026-11-14T13:00",
+      "end": "2026-11-14T16:00",
+      "placeId": "place-12",
+      "createdBy": "mem-02",
+      "visibility": "public",
+      "status": "upcoming",
+      "illustrative": true
+    },
+    {
+      "id": "oe-02",
+      "kind": "org-event",
+      "orgId": "org-rnn",
+      "name": "Neighbours potluck",
+      "category": "Social",
+      "start": "2026-11-21T18:00",
+      "end": "2026-11-21T20:00",
+      "placeId": "place-12",
+      "createdBy": "mem-05",
+      "visibility": "private until approved",
+      "status": "pending",
+      "illustrative": true
+    },
+    {
+      "id": "oe-03",
+      "kind": "org-event",
+      "orgId": "org-foodbank",
+      "name": "Holiday hamper sign-up day",
+      "category": "Food support",
+      "start": "2026-11-28T10:00",
+      "end": "2026-11-28T14:00",
+      "placeId": "place-12",
+      "createdBy": "mem-07",
+      "visibility": "public",
+      "status": "upcoming",
+      "illustrative": true
+    },
+    {
+      "id": "oe-04",
+      "kind": "org-event",
+      "orgId": "org-school",
+      "name": "School fun fair",
+      "category": "Family event",
+      "start": "2026-11-20T17:00",
+      "end": "2026-11-20T19:00",
+      "placeId": null,
+      "createdBy": "mem-10",
+      "visibility": "public",
+      "status": "upcoming",
+      "illustrative": true
+    },
+    {
+      "id": "oe-05",
+      "kind": "org-event",
+      "orgId": "org-library",
+      "name": "Tech help drop-in",
+      "category": "Learning",
+      "start": "2026-11-07T10:00",
+      "end": "2026-11-07T12:00",
+      "placeId": null,
+      "createdBy": "mem-12",
+      "visibility": "public",
+      "status": "upcoming",
+      "illustrative": true
+    }
+  ],
+  "staff": [
+    {
+      "id": "staff-311-lead",
+      "name": "Jordan Lee (demo)",
+      "orgProfileId": "profile-city",
+      "title": "311 intake lead",
+      "lead": true,
+      "illustrative": true
+    },
+    {
+      "id": "staff-311-roads",
+      "name": "Sam Patel (demo)",
+      "orgProfileId": "profile-city",
+      "title": "Roads and street lighting crew",
+      "lead": false,
+      "illustrative": true
+    },
+    {
+      "id": "staff-311-parks",
+      "name": "Dana Wright (demo)",
+      "orgProfileId": "profile-city",
+      "title": "Parks and forestry",
+      "lead": false,
+      "illustrative": true
+    },
+    {
+      "id": "staff-bia-coord",
+      "name": "Alex Moreau (demo)",
+      "orgProfileId": "profile-bia",
+      "title": "BIA coordinator",
+      "lead": true,
+      "illustrative": true
+    },
+    {
+      "id": "staff-bia-support",
+      "name": "Lee Chen (demo)",
+      "orgProfileId": "profile-bia",
+      "title": "Business support officer",
+      "lead": false,
+      "illustrative": true
+    }
+  ],
+  "requests": [
+    {
+      "id": "req-issue-05",
+      "issueId": "issue-05",
+      "title": "Streetlight out near the pharmacy",
+      "category": "Maintenance",
+      "placeId": "place-10",
+      "description": "Light has been off for three nights.",
+      "requesterId": "profile-resident",
+      "requesterName": "Team 2 Group 10",
+      "requesterKind": "resident",
+      "toProfile": "profile-city",
+      "ccProfile": "profile-councillor",
+      "state": "new",
+      "createdAt": "2026-10-07T21:10:00.000Z",
+      "updatedAt": "2026-10-07T21:10:00.000Z",
+      "public": false,
+      "history": [
+        {
+          "at": "2026-10-07T21:10:00.000Z",
+          "byId": "profile-resident",
+          "byName": "Team 2 Group 10",
+          "action": "created",
+          "text": "Light has been off for three nights."
+        }
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "req-issue-04",
+      "issueId": "issue-04",
+      "title": "Sidewalk closed in front of the bakery",
+      "category": "Roadworks and access",
+      "placeId": "place-01",
+      "description": "Customers think the shop is shut.",
+      "requesterId": "profile-business",
+      "requesterName": "Rosa's Bakery",
+      "requesterKind": "business",
+      "toProfile": "profile-bia",
+      "state": "acknowledged",
+      "createdAt": "2026-10-06T14:00:00.000Z",
+      "updatedAt": "2026-10-07T15:30:00.000Z",
+      "public": false,
+      "history": [
+        {
+          "at": "2026-10-06T14:00:00.000Z",
+          "byId": "profile-business",
+          "byName": "Rosa's Bakery",
+          "action": "created",
+          "text": "Customers think the shop is shut."
+        },
+        {
+          "at": "2026-10-07T15:30:00.000Z",
+          "byId": "staff-bia-coord",
+          "byName": "Alex Moreau (demo)",
+          "action": "acknowledge"
+        },
+        {
+          "at": "2026-10-07T15:32:00.000Z",
+          "byId": "staff-bia-coord",
+          "byName": "Alex Moreau (demo)",
+          "action": "update",
+          "text": "Thanks Rosa. We've asked the City for the work schedule and will post a notice that shops are open."
+        }
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "req-07",
+      "title": "Pothole on Wyandotte at Pierre Ave",
+      "category": "Roads",
+      "placeId": "place-05",
+      "description": "Deep pothole in the eastbound lane, cyclists swerve around it.",
+      "requesterId": "profile-resident-maya",
+      "requesterName": "Maya R. (demo)",
+      "requesterKind": "resident",
+      "toProfile": "profile-city",
+      "ccProfile": "profile-councillor",
+      "state": "assigned",
+      "assigneeId": "staff-311-roads",
+      "createdAt": "2026-10-25T13:05:00.000Z",
+      "updatedAt": "2026-10-26T16:20:00.000Z",
+      "public": true,
+      "history": [
+        {
+          "at": "2026-10-25T13:05:00.000Z",
+          "byId": "profile-resident-maya",
+          "byName": "Maya R. (demo)",
+          "action": "created",
+          "text": "Deep pothole in the eastbound lane, cyclists swerve around it."
+        },
+        {
+          "at": "2026-10-26T16:10:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "acknowledge"
+        },
+        {
+          "at": "2026-10-26T16:20:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "assign",
+          "text": "Assigned to Sam Patel, Roads and street lighting crew"
+        },
+        {
+          "at": "2026-10-27T18:00:00.000Z",
+          "byId": "profile-resident-chris",
+          "byName": "Chris D. (demo)",
+          "action": "support"
+        }
+      ],
+      "illustrative": true,
+      "supporters": [
+        "profile-resident-chris"
+      ]
+    },
+    {
+      "id": "req-08",
+      "title": "Bins overflowing near Glidden",
+      "category": "Garbage and recycling",
+      "placeId": "place-06",
+      "description": "Bins have been full since the weekend.",
+      "requesterId": "profile-resident-chris",
+      "requesterName": "Chris D. (demo)",
+      "requesterKind": "resident",
+      "toProfile": "profile-city",
+      "state": "needs-info",
+      "stateBeforeInfo": "acknowledged",
+      "createdAt": "2026-10-27T10:00:00.000Z",
+      "updatedAt": "2026-10-28T09:15:00.000Z",
+      "public": false,
+      "history": [
+        {
+          "at": "2026-10-27T10:00:00.000Z",
+          "byId": "profile-resident-chris",
+          "byName": "Chris D. (demo)",
+          "action": "created",
+          "text": "Bins have been full since the weekend."
+        },
+        {
+          "at": "2026-10-28T09:10:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "acknowledge"
+        },
+        {
+          "at": "2026-10-28T09:15:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "ask-info",
+          "text": "Which corner are they on, and are they the City's street bins or a store's own bins?"
+        }
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "req-09",
+      "title": "Delivery zone blocked every morning",
+      "category": "Corridor problem",
+      "placeId": "place-02",
+      "description": "Cars park in the loading zone from 7 to 10 am, so our deliveries stop in the lane.",
+      "requesterId": "profile-business-northside",
+      "requesterName": "Northside Books (demo)",
+      "requesterKind": "business",
+      "toProfile": "profile-bia",
+      "state": "new",
+      "createdAt": "2026-10-29T12:40:00.000Z",
+      "updatedAt": "2026-10-29T12:40:00.000Z",
+      "public": false,
+      "history": [
+        {
+          "at": "2026-10-29T12:40:00.000Z",
+          "byId": "profile-business-northside",
+          "byName": "Northside Books (demo)",
+          "action": "created",
+          "text": "Cars park in the loading zone from 7 to 10 am, so our deliveries stop in the lane."
+        }
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "req-10",
+      "title": "Leaking roof in our unit",
+      "category": "Something else",
+      "placeId": "place-03",
+      "description": "Water comes through the ceiling when it rains.",
+      "requesterId": "profile-business-tailors",
+      "requesterName": "Corner Thread Tailors (demo)",
+      "requesterKind": "business",
+      "toProfile": "profile-bia",
+      "state": "declined",
+      "createdAt": "2026-10-21T11:00:00.000Z",
+      "updatedAt": "2026-10-22T10:05:00.000Z",
+      "public": false,
+      "history": [
+        {
+          "at": "2026-10-21T11:00:00.000Z",
+          "byId": "profile-business-tailors",
+          "byName": "Corner Thread Tailors (demo)",
+          "action": "created",
+          "text": "Water comes through the ceiling when it rains."
+        },
+        {
+          "at": "2026-10-22T10:05:00.000Z",
+          "byId": "staff-bia-coord",
+          "byName": "Alex Moreau (demo)",
+          "action": "decline",
+          "text": "Repairs inside a rented unit are between you and your landlord, so the BIA can't act on this. If the landlord doesn't respond, the City's property standards team can help. Call 311."
+        }
+      ],
+      "illustrative": true
+    },
+    {
+      "id": "req-11",
+      "title": "Faded crosswalk at Thompson",
+      "category": "Roads",
+      "placeId": "place-13",
+      "description": "The crosswalk lines are almost gone.",
+      "requesterId": "profile-resident-maya",
+      "requesterName": "Maya R. (demo)",
+      "requesterKind": "resident",
+      "toProfile": "profile-city",
+      "ccProfile": "profile-councillor",
+      "state": "resolved",
+      "assigneeId": "staff-311-roads",
+      "createdAt": "2026-10-12T09:00:00.000Z",
+      "updatedAt": "2026-10-21T09:00:00.000Z",
+      "resolvedAt": "2026-10-20T15:00:00.000Z",
+      "public": true,
+      "history": [
+        {
+          "at": "2026-10-12T09:00:00.000Z",
+          "byId": "profile-resident-maya",
+          "byName": "Maya R. (demo)",
+          "action": "created",
+          "text": "The crosswalk lines are almost gone."
+        },
+        {
+          "at": "2026-10-13T10:00:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "acknowledge"
+        },
+        {
+          "at": "2026-10-13T10:05:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "assign",
+          "text": "Assigned to Sam Patel, Roads and street lighting crew"
+        },
+        {
+          "at": "2026-10-20T15:00:00.000Z",
+          "byId": "staff-311-roads",
+          "byName": "Sam Patel (demo)",
+          "action": "resolve",
+          "text": "Crosswalk repainted on Oct 20."
+        },
+        {
+          "at": "2026-10-21T09:00:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "publish",
+          "text": "Crosswalk repainted on Oct 20. The City will check the lines again in the spring."
+        },
+        {
+          "at": "2026-10-21T12:00:00.000Z",
+          "byId": "profile-resident-maya",
+          "byName": "Maya R. (demo)",
+          "action": "rate",
+          "text": "Yes, it's fixed. Looks great, thank you."
+        }
+      ],
+      "illustrative": true,
+      "rating": {
+        "value": "fixed",
+        "text": "Looks great, thank you.",
+        "at": "2026-10-21T12:00:00.000Z"
+      },
+      "issueId": "issue-07",
+      "outcome": "Crosswalk repainted on Oct 20. The City will check the lines again in the spring."
+    },
+    {
+      "id": "req-12",
+      "issueId": "issue-08",
+      "title": "Street light out near Glidden Grocer",
+      "category": "Street lights",
+      "placeId": "place-06",
+      "description": "The light has flickered for a week.",
+      "requesterId": "profile-resident-chris",
+      "requesterName": "Chris T. (demo)",
+      "requesterKind": "resident",
+      "toProfile": "profile-city",
+      "ccProfile": "profile-councillor",
+      "state": "resolved",
+      "assigneeId": "staff-311-roads",
+      "createdAt": "2026-10-26T08:30:00.000Z",
+      "updatedAt": "2026-11-03T14:00:00.000Z",
+      "resolvedAt": "2026-11-02T16:00:00.000Z",
+      "public": true,
+      "outcome": "New bulb fitted on Nov 2. The light now stays on all night.",
+      "history": [
+        {
+          "at": "2026-10-26T08:30:00.000Z",
+          "byId": "profile-resident-chris",
+          "byName": "Chris T. (demo)",
+          "action": "created",
+          "text": "The light has flickered for a week."
+        },
+        {
+          "at": "2026-10-27T09:00:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "acknowledge"
+        },
+        {
+          "at": "2026-10-27T09:05:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "assign",
+          "text": "Assigned to Sam Patel, Roads and street lighting crew"
+        },
+        {
+          "at": "2026-11-02T16:00:00.000Z",
+          "byId": "staff-311-roads",
+          "byName": "Sam Patel (demo)",
+          "action": "resolve",
+          "text": "New bulb fitted on Nov 2."
+        },
+        {
+          "at": "2026-11-03T14:00:00.000Z",
+          "byId": "staff-311-lead",
+          "byName": "Jordan Lee (demo)",
+          "action": "publish",
+          "text": "New bulb fitted on Nov 2. The light now stays on all night."
+        }
+      ],
+      "illustrative": true
+    }
+  ],
+  "schools": [
+    {
+      "id": "school-01",
+      "kind": "school",
+      "orgId": "org-school",
+      "name": "Riverside Public School (demo)",
+      "lat": 42.3295,
+      "lng": -82.9697,
+      "zoneRadiusM": 90,
+      "routes": [
+        {
+          "id": "route-a",
+          "name": "Route A",
+          "from": "Thompson Parkette",
+          "minutes": 6,
+          "coords": [
+            [
+              -82.970787,
+              42.328319
+            ],
+            [
+              -82.9705,
+              42.3288
+            ],
+            [
+              -82.9701,
+              42.3292
+            ],
+            [
+              -82.9697,
+              42.3295
+            ]
+          ],
+          "crossings": [
+            {
+              "id": "cross-a1",
+              "name": "Crosswalk A1",
+              "lng": -82.9705,
+              "lat": 42.3288
+            }
+          ]
+        },
+        {
+          "id": "route-b",
+          "name": "Route B",
+          "from": "Corridor Community Hall",
+          "minutes": 7,
+          "coords": [
+            [
+              -82.966607,
+              42.329164
+            ],
+            [
+              -82.9667,
+              42.3297
+            ],
+            [
+              -82.968,
+              42.3297
+            ],
+            [
+              -82.969,
+              42.3297
+            ],
+            [
+              -82.9697,
+              42.3295
+            ]
+          ],
+          "crossings": [
+            {
+              "id": "cross-b1",
+              "name": "Crosswalk B1",
+              "lng": -82.9667,
+              "lat": 42.32945
+            }
+          ]
+        }
+      ],
+      "demo": {
+        "staffName": "Ms. Laurent (demo)",
+        "parentGrades": [
+          "2"
+        ]
+      },
+      "illustrative": true
+    }
+  ],
+  "schoolNotices": [
+    {
+      "id": "sn-01",
+      "kind": "school-notice",
+      "schoolId": "school-01",
+      "type": "event",
+      "title": "Fall concert",
+      "body": "Students perform for the community in the gym. Everyone is welcome.",
+      "audience": "public",
+      "date": "2026-11-12T18:30",
+      "postedBy": "Ms. Laurent (demo)",
+      "posted": "2026-10-28",
+      "illustrative": true
+    },
+    {
+      "id": "sn-02",
+      "kind": "school-notice",
+      "schoolId": "school-01",
+      "type": "notice",
+      "title": "Winter clothing drive",
+      "body": "Drop gently used coats and boots at the front office. Open to the whole neighbourhood.",
+      "audience": "public",
+      "postedBy": "Ms. Laurent (demo)",
+      "posted": "2026-10-29",
+      "illustrative": true
+    },
+    {
+      "id": "sn-03",
+      "kind": "school-notice",
+      "schoolId": "school-01",
+      "type": "notice",
+      "title": "Early dismissal on Nov 13",
+      "body": "School ends at 1:30 PM for a teacher training day. Please plan pick-up.",
+      "audience": "parents",
+      "postedBy": "Ms. Laurent (demo)",
+      "posted": "2026-10-30",
+      "illustrative": true
+    },
+    {
+      "id": "sn-04",
+      "kind": "school-notice",
+      "schoolId": "school-01",
+      "type": "event",
+      "title": "Parent-teacher interviews",
+      "body": "Book a 15-minute slot with your child's teacher.",
+      "audience": "parents",
+      "date": "2026-11-19T16:00",
+      "postedBy": "Ms. Laurent (demo)",
+      "posted": "2026-10-30",
+      "illustrative": true
+    },
+    {
+      "id": "sn-05",
+      "kind": "school-notice",
+      "schoolId": "school-01",
+      "type": "notice",
+      "title": "Library visit forms due Nov 6",
+      "body": "Please return the signed permission form to your teacher.",
+      "audience": "grade-2",
+      "postedBy": "Ms. Laurent (demo)",
+      "posted": "2026-10-31",
+      "illustrative": true
+    },
+    {
+      "id": "sn-06",
+      "kind": "school-notice",
+      "schoolId": "school-01",
+      "type": "notice",
+      "title": "Museum field trip on Nov 18",
+      "body": "Pack a lunch and wear comfortable shoes. Buses leave at 9:00 AM.",
+      "audience": "grade-5",
+      "postedBy": "Ms. Laurent (demo)",
+      "posted": "2026-10-31",
+      "illustrative": true
+    }
+  ],
+  "wardPolls": [
+    {
+      "id": "wpoll-01",
+      "wardId": "ward-demo",
+      "question": "Which spot should get new street lighting first?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Thompson Parkette",
+          "votes": 38
+        },
+        {
+          "id": "b",
+          "label": "Wyandotte at Glidden",
+          "votes": 52
+        },
+        {
+          "id": "c",
+          "label": "The lane behind the shops",
+          "votes": 21
+        }
+      ],
+      "closesOn": "2026-11-20",
+      "nextStep": "The top choice goes to City council's lighting budget in December. I will post the result here.",
+      "createdBy": "profile-councillor",
+      "votedBy": [],
+      "createdAt": "2026-10-30T14:00:00.000Z",
+      "illustrative": true
+    }
+  ],
+  "areaAlerts": [
+    {
+      "id": "alert-01",
+      "fromProfile": "profile-city",
+      "fromName": "City of Windsor 311 (demo)",
+      "title": "Hydrant flushing on Wyandotte St E",
+      "message": "Crews are flushing hydrants between Thompson and Glidden, 9 am to 3 pm. Tap water may look cloudy; run the cold tap for a few minutes.",
+      "placeId": "place-08",
+      "center": [
+        -82.968073,
+        42.328867
+      ],
+      "radiusM": 500,
+      "audience": "everyone",
+      "until": "2026-11-20",
+      "createdAt": "2026-11-02T13:00:00.000Z",
+      "illustrative": true
+    }
+  ],
+  "orgPosts": [
+    {
+      "id": "op-01",
+      "kind": "org-post",
+      "orgId": "org-library",
+      "title": "Closed Wednesday, Nov 11 (Remembrance Day)",
+      "message": "The branch is closed all day. Book returns stay open.",
+      "from": "2026-11-06",
+      "until": "2026-11-11",
+      "postedBy": "mem-12",
+      "visibility": "public",
+      "illustrative": true
+    }
+  ]
+}
