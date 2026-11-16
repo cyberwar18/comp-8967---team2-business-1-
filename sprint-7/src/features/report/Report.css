@@ -1,0 +1,245 @@
+/* KAN-35 (Purab): Report a problem. Uses the shell's design tokens from src/index.css. */
+
+/* The button that opens the form, floating on the map. */
+.rp-open {
+  position: absolute;
+  z-index: 3;
+  top: 16px;
+  left: 412px; /* just right of the floating search panel */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 16px 0 12px;
+  border: none;
+  border-radius: 999px;
+  background: var(--river);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-float);
+}
+.rp-open:hover { background: #174a75; }
+.rp-open:focus-visible { outline: none; box-shadow: var(--focus); }
+.rp-open-short { display: none; }
+
+.rp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(24, 35, 46, 0.45);
+  font-family: var(--font);
+  color: var(--ink);
+}
+
+.rp-dialog {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 24px;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  box-shadow: 0 12px 40px rgba(24, 35, 46, 0.25);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.rp-dialog h2 {
+  margin: 0 40px 4px 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.rp-dialog h2:focus { outline: none; }
+.rp-muted { margin: 0; color: var(--ink-2); font-size: 14px; }
+
+.rp-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--ground);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.rp-close:hover { color: var(--ink); }
+
+.rp-field {
+  margin: 18px 0 0;
+  padding: 0;
+  border: none;
+  min-width: 0;
+}
+.rp-field legend,
+.rp-field > label {
+  display: block;
+  margin: 0 0 8px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.rp-types {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.rp-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.rp-type:hover { border-color: #b9c3ca; }
+.rp-type.is-on {
+  border-color: var(--river);
+  background: var(--river-soft);
+  color: var(--river);
+}
+.rp-type input { width: 18px; height: 18px; margin: 0; flex: none; accent-color: var(--river); }
+
+.rp-dialog select,
+.rp-dialog textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid #8a96a3;
+  border-radius: var(--r-sm);
+}
+.rp-dialog select { min-height: 46px; }
+.rp-dialog textarea { resize: vertical; min-height: 80px; }
+.rp-dialog [aria-invalid='true'] { border-color: var(--brick); }
+
+.rp-count { margin: 4px 0 0; font-size: 12px; color: var(--ink-3); text-align: right; }
+.rp-count.is-over { color: var(--brick); font-weight: 600; }
+.rp-error { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: var(--brick); }
+
+.rp-route {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: var(--r-md);
+  background: var(--river-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rp-route-to { margin: 0; font-size: 15px; }
+.rp-route-to span { color: var(--ink-2); }
+.rp-private {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.rp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.rp-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+a.rp-btn--link { display: inline-flex; align-items: center; text-decoration: none; }
+a.rp-btn--link:focus-visible { outline: none; box-shadow: var(--focus); }
+.rp-btn--primary { border-color: var(--river); background: var(--river); color: #fff; }
+.rp-btn--primary:hover { background: #174a75; }
+.rp-btn[disabled] { opacity: 0.7; cursor: progress; }
+.rp-dialog button:focus-visible,
+.rp-dialog select:focus-visible,
+.rp-dialog textarea:focus-visible,
+.rp-type:focus-within {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.rp-demo { margin: 14px 0 0; font-size: 12px; color: var(--ink-3); }
+
+.rp-done { display: flex; flex-direction: column; gap: 10px; }
+.rp-done p { margin: 0; }
+.rp-done-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--moss-soft);
+  color: var(--moss);
+}
+
+@media (max-width: 720px) {
+  .rp-open { top: 12px; left: 12px; height: 40px; padding: 0 14px 0 10px; }
+  .rp-open-long { display: none; }
+  .rp-open-short { display: inline; }
+  .rp-overlay { place-items: end center; padding: 0; }
+  .rp-dialog {
+    width: 100%;
+    max-height: 92vh;
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+    padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+  }
+  .rp-types { grid-template-columns: 1fr; }
+}
+
+/* Sprint 6: pick the spot on the map, photo, and who can see it */
+.rp-overlay[hidden] { display: none; }
+.rp-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; }
+.rp-picked { margin: 0; width: 100%; font-size: 14px; font-weight: 600; color: var(--moss); }
+.rp-btn--small { min-height: 38px; padding: 0 14px; font-size: 14px; }
+.rp-linkbtn { border: none; background: none; padding: 0; color: var(--river); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.rp-linkbtn:focus-visible { outline: none; box-shadow: var(--focus); }
+.rp-photo { display: flex; align-items: center; gap: 12px; }
+.rp-photo img { width: 96px; height: 72px; object-fit: cover; border-radius: var(--r-sm); border: 1px solid var(--line); }
+.rp-dialog input[type='file'] { font: inherit; font-size: 14px; }
+.rp-share .rp-type span { display: flex; flex-direction: column; }
+.rp-share small { font-weight: 400; font-size: 13px; color: var(--ink-2); }
+.rp-pickbar {
+  position: absolute; z-index: 4; top: 16px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 999px;
+  background: var(--ink); color: #fff; font-weight: 700; font-size: 14px; box-shadow: var(--shadow-float);
+}
+.rp-pickbar button { border: none; border-radius: 999px; padding: 6px 12px; background: #fff; color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.rp-pickbar button:focus-visible { outline: none; box-shadow: var(--focus); }
+
+/* Sprint 6: "Me too" */
+.rp-similar { margin-top: 18px; padding: 14px 16px; border-radius: var(--r-md); background: var(--amber-soft); }
+.rp-similar h3 { margin: 0 0 4px; font-size: 15px; }
+.rp-similar ul { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.rp-similar li { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 12px; border-radius: var(--r-sm); background: var(--surface); }
+.rp-similar li > span:first-child { display: flex; flex-direction: column; }
+.rp-similar small { font-size: 13px; color: var(--ink-2); }
+.rp-supported { font-size: 13px; font-weight: 700; color: var(--moss); white-space: nowrap; }

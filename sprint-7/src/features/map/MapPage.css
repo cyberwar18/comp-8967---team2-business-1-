@@ -1,0 +1,142 @@
+/* The map fills the page; the search panel floats over it.
+   Desktop: a card on the left. Phone (720px and below): a bottom sheet that opens and closes. */
+.mp-root {
+  position: relative;
+  height: 100%;
+}
+.mp-map {
+  position: absolute;
+  inset: 0;
+}
+.mp-map .cm-root { min-height: 0; }
+
+.mp-panel {
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  left: 16px;
+  bottom: 16px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-float);
+  overflow: hidden;
+}
+.mp-panel-body {
+  flex: 1;
+  min-height: 0;
+}
+.mp-sheet-toggle { display: none; }
+
+.mp-status {
+  margin: 88px auto;
+  text-align: center;
+  font-size: 15px;
+  color: var(--ink-2);
+}
+
+@media (max-width: 720px) {
+  .mp-panel {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-height: 72%;
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+    box-shadow: 0 -6px 24px rgba(24, 35, 46, 0.14);
+  }
+  .mp-panel-body {
+    overflow-y: auto;
+  }
+
+  .mp-sheet-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 16px 4px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--river);
+    cursor: pointer;
+  }
+  .mp-sheet-toggle:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 3px var(--river);
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+  }
+  .mp-sheet-handle {
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: #c4ccd2;
+  }
+
+  .mp-panel .saf-head { padding-top: 8px; }
+
+  /* Closed sheet: keep only the search box visible. */
+  .mp-panel--collapsed .filter-chips,
+  .mp-panel--collapsed .result-count,
+  .mp-panel--collapsed .result-cards,
+  .mp-panel--collapsed .demo-label {
+    display: none;
+  }
+  .mp-panel--collapsed .saf-head {
+    border-bottom: none;
+    padding-bottom: 14px;
+  }
+}
+
+/* ---- Bhavana, tasks 10–12: Search / Around you tabs and the card view inside the panel ---- */
+.mp-panel-body { display: flex; flex-direction: column; }
+.mp-lists { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.mp-lists[hidden], .mp-tabpanel[hidden] { display: none; }
+.mp-tabpanel { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.mp-tabs {
+  display: flex; gap: 4px; margin: 12px 16px 0; padding: 4px;
+  background: var(--ground); border-radius: 999px;
+}
+.mp-tabs button {
+  flex: 1; min-height: 36px; font-size: 14px; font-weight: 600; cursor: pointer;
+  border: none; border-radius: 999px; background: transparent; color: var(--ink-2);
+}
+.mp-tabs button[aria-selected='true'] { background: var(--surface); color: var(--river); box-shadow: 0 1px 3px rgba(24, 35, 46, 0.12); }
+.mp-tabs button:focus-visible { outline: none; box-shadow: var(--focus); }
+.mp-detail { flex: 1; min-height: 0; overflow-y: auto; }
+
+@media (max-width: 720px) {
+  /* Closed sheet: only the search box, as before. */
+  .mp-panel--collapsed .mp-tabs,
+  .mp-panel--collapsed .mp-detail,
+  .mp-panel--collapsed .ay { display: none; }
+  .mp-panel--collapsed .mp-lists[hidden],
+  .mp-panel--collapsed .mp-tabpanel--search[hidden] { display: flex; }
+}
+
+/* Sprint 6 (Devu): "You said, we did" tab */
+.ysd { display: flex; flex-direction: column; gap: 10px; padding: 4px 2px 12px; }
+.ysd-intro { margin: 0; font-size: 13px; color: var(--muted, #4a5560); }
+.ysd-n { font-variant-numeric: tabular-nums; opacity: 0.8; }
+.ysd-cards, .ysd-rows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ysd-card, .ysd-row { width: 100%; text-align: left; font: inherit; color: inherit; background: #fff; border: 1px solid #cfd6dc; border-radius: 12px; padding: 10px 12px; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
+.ysd-card { border-left: 5px solid #1b7f3b; }
+.ysd-card.is-on, .ysd-row.is-on { outline: 3px solid #1e5a8c; outline-offset: 1px; }
+.ysd-card:hover, .ysd-row:hover { background: #f5f8fa; }
+.ysd-tag { font-size: 12px; font-weight: 700; color: #145c2b; }
+.ysd-k { display: inline-block; min-width: 62px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; color: #4a5560; }
+.ysd-said { font-weight: 600; }
+.ysd-did { font-size: 14px; }
+.ysd-by { font-size: 12px; color: #4a5560; }
+.ysd-row { flex-direction: row; align-items: center; justify-content: space-between; gap: 10px; }
+.ysd-row-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ysd-phase { flex: none; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 3px 10px; border: 1.5px solid #4a5560; background: #fff; color: #1f2937; }
+.ysd-phase--resolved { border-color: #1b7f3b; background: #e7f4ea; color: #145c2b; }
+.ysd-phase--declined, .ysd-phase--withdrawn { border-color: #4b5563; background: #eef0f2; color: #374151; }
+.ysd-empty { margin: 0; font-size: 14px; color: #4a5560; }

@@ -1,0 +1,52 @@
+/* Sprint 6: Updates section */
+.up-page { height: 100%; overflow-y: auto; box-sizing: border-box; padding: 18px 20px 36px; font-size: 15px; line-height: 1.45; }
+.up-head { max-width: 1280px; margin: 0 0 14px; }
+.up-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; max-width: 1280px; }
+.up-col { display: flex; flex-direction: column; gap: 20px; }
+.up-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; }
+.up-card--alert { border-color: #f1dcb9; background: var(--amber-soft); }
+.up-h2 { margin: 0 0 6px; font-size: 19px; font-weight: 800; }
+.up-h3 { margin: 0 0 6px; font-size: 16px; font-weight: 800; }
+.up-h4 { margin: 14px 0 6px; font-size: 14px; }
+.up-tag { display: inline-block; margin: 0 0 8px; padding: 2px 10px; border-radius: 999px; background: var(--amber); color: #fff; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; }
+.up-tag--plain { background: var(--ink); }
+.up-ok { margin: 6px 0 0; font-weight: 700; color: var(--moss); }
+.up-warn { font-weight: 700; color: var(--amber); }
+.up-count { margin: 2px 0 0; font-size: 12px; color: var(--ink-3); text-align: right; }
+.up-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.up-list li { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: var(--r-md); background: var(--ground); font-size: 14px; }
+.up-list li span { color: var(--ink-2); }
+.up-alerts { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.up-alerts li { padding: 12px; border-radius: var(--r-md); background: var(--river-soft); }
+.up-alerts p { margin: 4px 0 0; font-size: 14px; }
+.up-alert-from { margin: 0 0 4px; font-size: 12px; font-weight: 700; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.03em; }
+.up-alert-area { color: var(--ink-2); font-size: 13px !important; }
+.up-form { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.up-form label, .up-form legend { font-weight: 700; font-size: 14px; }
+.up-form input, .up-form textarea, .up-form select, .up-card textarea, .up-card input[type='date'] {
+  width: 100%; box-sizing: border-box; padding: 9px 11px; font: inherit; font-size: 15px; color: var(--ink);
+  background: var(--surface); border: 1px solid #8a96a3; border-radius: var(--r-sm);
+}
+.up-form input:focus-visible, .up-form textarea:focus-visible, .up-form select:focus-visible, .up-card textarea:focus-visible, .up-card input[type='date']:focus-visible { outline: none; box-shadow: var(--focus); }
+.up-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.up-row > div { display: flex; flex-direction: column; gap: 4px; }
+.up-reach { margin: 4px 0 0; font-weight: 700; color: var(--river); }
+.up-sent { margin: 0; padding-left: 18px; font-size: 13px; color: var(--ink-2); }
+.up-poll { margin-top: 14px; padding: 14px; border-radius: var(--r-md); background: var(--ground); }
+.up-options { border: none; margin: 8px 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.up-option { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 12px; box-sizing: border-box; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); font-weight: 600; cursor: pointer; }
+.up-option.is-on { border-color: var(--river); background: var(--river-soft); color: var(--river); }
+.up-option:focus-within { box-shadow: var(--focus); }
+.up-option input { width: 18px; height: 18px; margin: 0; accent-color: var(--river); }
+.up-why { margin: 8px 0 0; font-weight: 600; color: var(--ink-2); }
+.up-results { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.up-results li { display: grid; grid-template-columns: minmax(120px, 40%) 1fr auto; gap: 8px; align-items: center; }
+.up-next { margin: 10px 0 0; font-size: 14px; }
+.up-optinputs { border: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+@media (max-width: 900px) { .up-grid { grid-template-columns: 1fr; } .up-page { padding: 12px 12px 24px; } }
+
+/* ---- Business posts and reporting one (KAN-52) ---- */
+.up-posts { display: flex; flex-direction: column; gap: 12px; margin: 12px 0 0; padding: 0; list-style: none; }
+.up-post { padding: 12px 14px; background: var(--ground); border-radius: var(--r-md); }
+.up-post-name { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+.up-post-ok { margin: 8px 0 0; padding: 8px 10px; font-size: 14px; background: var(--moss-soft); border-radius: var(--r-sm); }
