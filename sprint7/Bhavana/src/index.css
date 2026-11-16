@@ -1,0 +1,39 @@
+/* Design tokens for the whole shell. One family (Public Sans), river blue as the main colour. */
+:root {
+  --font: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --ink: #18232e;          /* main text */
+  --ink-2: #4d5b68;        /* secondary text */
+  --ink-3: #5e6a76;        /* hints (darkened for 4.5:1 contrast, a11y check) */
+  --ground: #eef2f1;       /* page background */
+  --surface: #ffffff;      /* panels and cards */
+  --line: #dde3e6;         /* borders */
+  --river: #1e5a8c;        /* main colour: buttons, active states, clusters */
+  --river-soft: #e6eff7;
+  --moss: #2a6f51;         /* open, resolved, published (darkened for 4.5:1, a11y check) */
+  --moss-soft: #e4f2ea;
+  --amber: #a84d08;        /* in progress, temporarily closed (darkened for 4.5:1, a11y check) */
+  --amber-soft: #fdf0e1;
+  --brick: #b42318;        /* reported problems */
+  --brick-soft: #fde9e7;
+  --stone-soft: #eceff1;   /* past, vacant */
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --shadow-float: 0 1px 2px rgba(24, 35, 46, 0.06), 0 8px 24px rgba(24, 35, 46, 0.12);
+  --focus: 0 0 0 3px #ffffff, 0 0 0 5px var(--river);
+}
+
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--ground);
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font-family: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

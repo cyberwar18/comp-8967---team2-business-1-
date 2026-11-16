@@ -1,0 +1,48 @@
+/* School workspace (KAN-43). Reuses the Community cards, pills, buttons and form (Community.css). */
+
+.sw { margin: 0 0 20px; }
+.sw-status { padding: 16px 0; color: var(--ink-2); }
+.sw-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px 24px; margin-bottom: 14px; }
+.sw-title { margin: 0 0 4px; font-size: 20px; font-weight: 800; letter-spacing: -0.01em; }
+.sw-help { margin: 0; max-width: 60ch; font-size: 14px; color: var(--ink-2); }
+.sw-toggle { flex-wrap: wrap; }
+
+/* Roadwork alert. The words "Roadwork alert" / "All clear" carry the meaning, not just the colour. */
+.sw-alert { margin: 0 0 16px; padding: 14px 16px; border: 1px solid var(--line); border-left: 6px solid var(--moss); border-radius: var(--r-md); background: var(--moss-soft); }
+.sw-alert.is-on { border-color: #e2b57a; border-left-color: var(--amber); background: var(--amber-soft); }
+.sw-alert p { margin: 0; }
+.sw-alert-title { font-weight: 700; }
+.sw-alert-tag { display: inline-block; margin-right: 6px; padding: 2px 8px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: #fff; background: var(--moss); border-radius: 999px; }
+.sw-alert.is-on .sw-alert-tag { background: var(--amber); }
+.sw-alert-line { margin-top: 6px !important; font-size: 14px; }
+.sw-alert-advice { margin-top: 6px !important; font-size: 14px; font-weight: 700; }
+
+.sw-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 18px; align-items: start; }
+
+.sw-route,
+.sw-notice { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.cw-list > li.sw-route:first-child,
+.cw-list > li.sw-notice:first-child { border-top: none; }
+.sw-route-body,
+.sw-notice-body { flex: 1; min-width: 0; }
+.sw-route > .cw-pill,
+.sw-notice > .cw-pill { align-self: flex-start; }
+.sw-route-warn { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: var(--amber); }
+.sw-maplink { display: inline-flex; align-items: center; margin-top: 12px; text-decoration: none; }
+.sw-type { margin-left: 6px; padding: 1px 8px; font-size: 12px; font-weight: 700; color: var(--ink-2); background: var(--ground); border-radius: 999px; }
+.sw-notice-text { margin: 6px 0 0; font-size: 14px; }
+.sw-notice-by { margin: 4px 0 0; font-size: 12px; color: var(--ink-3); }
+.sw-form-row { grid-template-columns: 1fr 1fr; }
+
+.sw-privacy { margin-top: 18px; padding: 14px 16px; border: 1px dashed #c0cad1; border-radius: var(--r-md); font-size: 14px; }
+.sw-privacy h4 { margin: 0 0 6px; font-size: 15px; font-weight: 800; }
+.sw-privacy p { margin: 4px 0; }
+
+@media (max-width: 900px) {
+  .sw-grid { grid-template-columns: 1fr; }
+}
+
+/* Sprint 6: the school follows "Viewing as" */
+.sw-viewas { margin: 8px 0 12px; padding: 8px 12px; border-radius: 10px; background: #eef4f1; border: 1px solid #b7d1c4; font-size: 14px; }
+.sw-requests { margin-top: 16px; }
+

@@ -1,0 +1,11 @@
+KAN-51 People and organizations can message each other safely: done (Bhavana)
+
+- Chats page (#/chats): conversation list with "N new", conversation, send box, New message. Follows Viewing as.
+- Chat linked to a request: "Message ... about this request" on the request page, for the sender and the organization handling it. The sender sees the organization, not staff names (filtered in the data layer).
+- Organization chats: a community group, school, library or the BIA can message its members.
+- Safety: block and unblock (the blocked person isn't told), report a message to Neighbr staff, and "Who can message me" (anyone / only my organizations / nobody new).
+- New messages show in the notification bell; opening the chat clears them.
+
+For the team: getMessageSetting / setMessageSetting (Purab, KAN-50), startChat for "Message the seller" (Devu, KAN-53), getMessageReports for the reported content queue (Mounika, KAN-52). Details in docs/KAN-51-chats.md.
+
+Evidence: 32 new tests, 364 pass in total, build passes, axe-core 0 issues on 6 screens, screenshots in docs/evidence/sprint-7-KAN-51-bhavana/ (01-11).
