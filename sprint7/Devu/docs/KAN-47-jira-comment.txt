@@ -1,0 +1,10 @@
+KAN-47 Devu: Show every request's progress and outcome on the map: done
+
+- Request pins say where the request is, in words (Reported, Received, Being handled, Needs more info, Resolved, Declined...), with a green ring when resolved; popup shows the status.
+- New "You said, we did" tab: published outcomes as cards (public title + what was done + who + date). Chips (All / In progress / Resolved / Declined) filter the list and the map pins.
+- Private stays private until the City/BIA publishes; a published outcome never shows who sent it or their message.
+- School can send requests to the City (staff only), shown in Requests and on the map.
+- School section now follows "Viewing as" (new: Parent, School staff); its own switch is removed.
+
+259 tests pass, build passes. Notes: docs/KAN-47-request-outcomes-on-map.md. Screenshots: docs/evidence/sprint-6-KAN-47-devu/.
+Open: sender chooses whether to publish to the map (Nigel, Nov 2).
