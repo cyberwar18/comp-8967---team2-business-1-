@@ -1,0 +1,10 @@
+KAN-52 Event permits and Neighbr moderation: done (Mounika)
+
+- New Neighbr staff user type in Viewing as (Taylor Brooks). They land on a new Review page, shown in the top bar only to Neighbr staff.
+- Event permits: an event in a public place (a park, a street) needs a permit upload (PDF, JPG or PNG, up to 5 MB). Organizer approves, then Neighbr staff approve the permit, then the event becomes a map pin until it ends. A hall or an online event needs no permit.
+- Permit queue for Neighbr staff: Approve, Decline with a reason, Ask for more information. The group sees "Neighbr staff" (never a staff name), reads the reason or question, and an organizer can answer or send it again with a new permit.
+- Reported content queue: chats (KAN-51), Marketplace listings (KAN-53) and business posts in one list. Staff Hide or Keep: a hidden message is replaced for both people, a hidden listing or post leaves the Marketplace and the map. Staff see who reported; the person it is about never does.
+- New: Report this post (Updates page and the map popup).
+- Senders get a notification for every decision (permit approve, decline, ask; report outcomes).
+
+Evidence: 80 new tests, 517 pass in total, build passes, axe-core 0 issues on 9 screens, screenshots in docs/evidence/sprint-7-KAN-52-mounika/ (01-17). Details in docs/KAN-52-event-permits-moderation.md.
