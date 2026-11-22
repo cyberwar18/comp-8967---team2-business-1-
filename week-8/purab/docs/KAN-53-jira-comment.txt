@@ -1,0 +1,10 @@
+KAN-53 Marketplace and expiring posts: done (Devu)
+
+- Marketplace page (#/marketplace): For sale, Free, Wanted, Services and Business offers, each with a picture or photo, price and area. 14 sample listings. Follows Viewing as.
+- Create a listing (kind, title, description, price, public meeting spot, 7/14/30 days, show on the map, optional photo) with search and filters: kind, price, Free only, distance, sort.
+- Listings can be shown on the map as pins (new Marketplace listings layer). The popup has a "View listing" link back to the listing.
+- Message the seller opens a chat in Chats (Bhavana, KAN-51). Report a listing goes to the Neighbr staff queue (Mounika, KAN-52): getListingReports / resolveListingReport.
+- Map posts expire: after the end date a listing, a business post ("We're open") or an offer leaves the map and its owner gets "This post has ended" in the notification bell. Sellers can also end a listing early and post it again.
+- Privacy: pins sit at public meeting spots, never homes; sellers show as first name and initial; City staff and the councillor cannot post.
+
+Evidence: 73 new tests, 437 pass in total, build passes, axe-core 0 issues on 3 screens, screenshots in docs/evidence/sprint-7-KAN-53-devu/ (01-18). Details in docs/KAN-53-marketplace.md.

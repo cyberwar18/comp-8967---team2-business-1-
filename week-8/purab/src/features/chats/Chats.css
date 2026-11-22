@@ -1,0 +1,79 @@
+/* KAN-51 (Bhavana): Chats page. Same tokens and look as the Requests section. */
+.ch-page { height: 100%; overflow-y: auto; box-sizing: border-box; padding: 16px 20px 32px; font-size: 15px; line-height: 1.45; }
+.ch-demo { margin: 0 0 14px; font-size: 13px; color: var(--ink-2); }
+.ch-layout > * { min-width: 0; }
+.ch-layout { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: 20px; align-items: start; max-width: 1180px; }
+.ch-list,
+.ch-pane > .ch-thread { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; box-sizing: border-box; }
+.ch-pane-empty { margin: 0; background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r-lg); padding: 40px 20px; text-align: center; color: var(--ink-2); }
+.ch-h1 { margin: 2px 0 6px; font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.ch-title { margin: 2px 0 6px; font-size: 20px; font-weight: 800; }
+.ch-title:focus { outline: none; }
+.ch-eyebrow { margin: 0; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); }
+.ch-muted { margin: 0 0 12px; color: var(--ink-2); font-size: 14px; }
+.ch-empty { color: var(--ink-2); }
+.ch-hint { margin: 4px 0 0; font-size: 13px; color: var(--ink-3); }
+.ch-error { margin: 6px 0 0; color: var(--brick); font-weight: 600; font-size: 14px; }
+.ch-ok { margin: 8px 0 0; padding: 8px 12px; background: var(--moss-soft); color: var(--moss); border-radius: var(--r-sm); font-weight: 600; font-size: 14px; }
+.ch-locked { margin: 16px 0 0; padding: 10px 12px; background: var(--stone-soft); border-radius: var(--r-sm); font-size: 14px; }
+.ch-back { margin: 0 0 8px; padding: 6px 0; background: none; border: 0; color: var(--river); font: inherit; font-weight: 600; cursor: pointer; }
+
+.ch-btn { min-height: 40px; padding: 8px 14px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); font: inherit; font-weight: 600; cursor: pointer; }
+.ch-btn--primary { background: var(--river); border-color: var(--river); color: #fff; }
+.ch-btn--danger { border-color: var(--brick); color: var(--brick); }
+.ch-btn:focus-visible,
+.ch-item:focus-visible,
+.ch-link:focus-visible,
+.ch-back:focus-visible { outline: none; box-shadow: var(--focus); }
+.ch-link { padding: 4px 0; background: none; border: 0; color: var(--ink-2); font: inherit; font-size: 13px; text-decoration: underline; cursor: pointer; }
+.ch-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+/* Conversation list */
+.ch-items { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ch-item { min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 2px; width: 100%; text-align: left; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; }
+.ch-item.is-current { border-color: var(--river); background: var(--river-soft); }
+.ch-item.is-unread strong { font-weight: 800; }
+.ch-item-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.ch-new { flex: none; padding: 1px 8px; border-radius: 999px; background: var(--river); color: #fff; font-size: 12px; font-weight: 700; }
+.ch-item-label { font-size: 13px; color: var(--ink-3); }
+.ch-item-last { display: block; max-width: 100%; font-size: 13px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.ch-setting { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.ch-setting label { font-weight: 700; }
+
+/* Thread */
+.ch-tools { margin: 4px 0 8px; }
+.ch-confirm { padding: 10px 12px; border: 1px solid var(--brick); border-radius: var(--r-sm); background: var(--brick-soft); }
+.ch-confirm p { margin: 0 0 8px; font-size: 14px; }
+.ch-confirm .ch-btn { margin-right: 8px; }
+.ch-messages { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.ch-msg { max-width: 85%; padding: 10px 12px; border-radius: var(--r-md); background: var(--ground); }
+.ch-msg.is-mine { align-self: flex-end; background: var(--river-soft); }
+.ch-msg-who { margin: 0; font-size: 13px; color: var(--ink-2); }
+.ch-msg-who span { margin-left: 4px; }
+.ch-msg-text { margin: 4px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ch-msg-text.is-removed { font-style: italic; color: #4b5563; }
+.ch-reported { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: var(--amber); }
+.ch-report { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+
+.ch-send { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+.ch-send label,
+.ch-report label { font-weight: 700; font-size: 14px; }
+.ch-send textarea,
+.ch-send select,
+.ch-report select,
+.ch-report input,
+.ch-setting select { max-width: 100%; box-sizing: border-box; font: inherit; padding: 8px 10px; border: 1px solid #8a96a1; border-radius: var(--r-sm); background: var(--surface); color: var(--ink); }
+.ch-send textarea:focus-visible,
+.ch-send select:focus-visible,
+.ch-report select:focus-visible,
+.ch-report input:focus-visible,
+.ch-setting select:focus-visible { outline: none; box-shadow: var(--focus); }
+.ch-send > .ch-btn { align-self: flex-start; }
+.ch-list > .ch-btn { margin-top: 4px; }
+
+@media (max-width: 720px) {
+  .ch-page { padding: 12px 12px 88px; }
+  .ch-layout { grid-template-columns: 1fr; }
+  .ch-msg { max-width: 100%; }
+}

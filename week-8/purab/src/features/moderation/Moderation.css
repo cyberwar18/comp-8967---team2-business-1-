@@ -1,0 +1,100 @@
+/* The Review page for Neighbr staff (KAN-52). Uses the shell's colour tokens from index.css. */
+
+.mo-page { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+.mo-head { margin-bottom: 8px; }
+.mo-eyebrow { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); }
+.mo-h1 { margin: 0 0 6px; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; }
+.mo-muted { color: var(--ink-2); font-size: 14px; }
+p.mo-muted { margin: 0 0 12px; }
+.mo-error { margin: 8px 0; padding: 10px 12px; font-size: 14px; color: var(--brick); background: var(--brick-soft); border-radius: var(--r-sm); }
+.mo-ok { margin: 8px 0; padding: 10px 12px; font-size: 14px; background: var(--moss-soft); border-radius: var(--r-sm); }
+.mo-hint { margin: 8px 0 0; font-size: 13px; color: var(--ink-3); }
+.mo-empty { margin: 16px 0; padding: 20px; text-align: center; color: var(--ink-2); background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r-md); }
+
+/* ---- Tabs and chips ---- */
+.mo-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0; border-bottom: 1px solid var(--line); }
+.mo-tab {
+  min-height: 44px;
+  padding: 0 16px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink-2);
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+.mo-tab.is-on { color: var(--river); border-bottom-color: var(--river); }
+.mo-tab:focus-visible { outline: none; box-shadow: var(--focus); }
+.mo-count { display: inline-block; min-width: 22px; padding: 1px 7px; font-size: 12px; text-align: center; color: #fff; background: var(--river); border-radius: 999px; }
+.mo-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+.mo-chip {
+  min-height: 40px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.mo-chip.is-on { color: #fff; background: var(--ink); border-color: var(--ink); }
+.mo-chip:focus-visible { outline: none; box-shadow: var(--focus); }
+
+/* ---- Cards ---- */
+.mo-list { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.mo-card { min-width: 0; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); }
+.mo-card-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.mo-card-title { margin: 0; font-size: 17px; font-weight: 800; overflow-wrap: anywhere; }
+.mo-kind { display: inline-block; margin-right: 4px; padding: 2px 8px; font-size: 12px; font-weight: 800; color: var(--river); background: var(--river-soft); border-radius: 6px; }
+.mo-meta { margin: 6px 0 0; font-size: 14px; color: var(--ink-2); overflow-wrap: anywhere; }
+.mo-file { margin: 8px 0 0; font-size: 14px; overflow-wrap: anywhere; }
+.mo-text { margin: 8px 0 0; font-size: 14px; overflow-wrap: anywhere; }
+.mo-quote-block { margin: 10px 0 0; padding: 10px 12px; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; background: var(--ground); border-left: 4px solid var(--line); border-radius: var(--r-sm); }
+.mo-quote { display: block; margin: 2px 0 6px; font-size: 14px; color: var(--ink-2); overflow-wrap: anywhere; }
+
+.mo-pill { display: inline-block; padding: 3px 10px; font-size: 12px; font-weight: 700; border-radius: 999px; }
+.mo-pill--with-staff, .mo-pill--open { background: var(--amber-soft); color: var(--amber); }
+.mo-pill--more-info, .mo-pill--with-organizer { background: var(--river-soft); color: var(--river); }
+.mo-pill--approved, .mo-pill--kept { background: var(--moss-soft); color: var(--moss); }
+.mo-pill--declined, .mo-pill--hidden { background: var(--brick-soft); color: var(--brick); }
+
+.mo-steps { margin-top: 10px; font-size: 14px; }
+.mo-steps summary { cursor: pointer; font-weight: 700; color: var(--river); }
+.mo-steps summary:focus-visible { outline: none; box-shadow: var(--focus); }
+.mo-steps ol { margin: 8px 0 0; padding-left: 20px; }
+.mo-steps li { margin-bottom: 4px; }
+
+/* ---- Buttons and form ---- */
+.mo-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.mo-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+.mo-btn:hover { border-color: #b9c3ca; }
+.mo-btn:focus-visible { outline: none; box-shadow: var(--focus); }
+.mo-btn:disabled { opacity: 0.6; cursor: default; }
+.mo-btn--primary { color: #fff; background: var(--river); border-color: var(--river); }
+.mo-btn--primary:hover { background: #174a75; }
+.mo-btn--danger { color: var(--brick); border-color: var(--brick); }
+.mo-form { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.mo-form label { font-size: 14px; font-weight: 700; }
+.mo-form textarea { width: 100%; box-sizing: border-box; padding: 10px; font: inherit; border: 1px solid #b9c3ca; border-radius: var(--r-sm); }
+.mo-form textarea:focus-visible { outline: none; box-shadow: var(--focus); }
+.mo-form textarea[aria-invalid='true'] { border-color: var(--brick); }
+
+@media (max-width: 640px) {
+  .mo-page { padding: 16px 16px 32px; }
+  .mo-actions .mo-btn { flex: 1 1 100%; justify-content: center; }
+}

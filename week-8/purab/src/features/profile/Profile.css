@@ -1,0 +1,61 @@
+/* KAN-50 (Purab): Your profile and Settings */
+.yp-page { height: 100%; overflow-y: auto; box-sizing: border-box; padding: 18px 20px 36px; font-size: 15px; line-height: 1.45; }
+.yp-head { max-width: 1100px; margin: 0 0 14px; }
+.yp-head h1 { margin: 0 0 4px; font-size: 24px; font-weight: 800; }
+.yp-head p { margin: 0; color: var(--ink-2); }
+.yp-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; max-width: 1100px; }
+.yp-col { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.yp-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; }
+.yp-status { padding: 24px; }
+.yp-h2 { margin: 0 0 6px; font-size: 19px; font-weight: 800; }
+.yp-h3 { margin: 0 0 6px; font-size: 14px; font-weight: 800; }
+.yp-who { display: flex; gap: 14px; align-items: center; }
+.yp-avatar { flex: none; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--river); color: #fff; font-weight: 800; font-size: 20px; }
+.yp-role { margin: 0; }
+.yp-badge { display: inline-block; padding: 1px 10px; border-radius: 999px; background: var(--river-soft); color: var(--river); font-weight: 700; font-size: 13px; }
+.yp-muted { margin: 4px 0 0; color: var(--ink-2); font-size: 14px; }
+.yp-small { font-size: 13px; margin-top: 14px; }
+.yp-bio { margin: 14px 0 0; }
+.yp-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.yp-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.yp-tags li { padding: 2px 10px; border-radius: 999px; background: var(--moss-soft); color: var(--moss); font-size: 13px; font-weight: 600; }
+.yp-tags--private li { background: var(--stone-soft); color: var(--ink-2); }
+.yp-rows { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.yp-rows a { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 14px; min-height: 44px; box-sizing: border-box; border-radius: var(--r-md); background: var(--ground); color: var(--ink); text-decoration: none; }
+.yp-rows a:hover { background: var(--river-soft); }
+.yp-rows a:focus-visible { outline: none; box-shadow: var(--focus); }
+.yp-row-label { font-weight: 700; }
+.yp-row-value { color: var(--ink-2); }
+.yp-form { display: flex; flex-direction: column; gap: 18px; }
+.yp-set { border: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.yp-set legend, .yp-legend { font-weight: 800; font-size: 15px; margin-bottom: 4px; padding: 0; }
+.yp-option { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 12px; box-sizing: border-box; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); cursor: pointer; }
+.yp-option--check { align-items: flex-start; padding: 10px 12px; }
+.yp-option--check input { margin-top: 2px; }
+.yp-option.is-on { border-color: var(--river); background: var(--river-soft); }
+.yp-option:focus-within { box-shadow: var(--focus); }
+.yp-option input { flex: none; width: 18px; height: 18px; margin: 0; accent-color: var(--river); }
+.yp-option > span { display: flex; flex-direction: column; }
+.yp-hint { color: var(--ink-2); font-size: 13px; margin: 0; }
+.yp-set select { width: 100%; box-sizing: border-box; padding: 9px 11px; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid #8a96a3; border-radius: var(--r-sm); }
+.yp-set select:focus-visible { outline: none; box-shadow: var(--focus); }
+.yp-actions { display: flex; gap: 10px; }
+.yp-btn { min-height: 44px; padding: 0 18px; border: none; border-radius: var(--r-md); background: var(--river); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.yp-btn:focus-visible { outline: none; box-shadow: var(--focus); }
+.yp-ok { margin: 0; font-weight: 700; color: var(--moss); }
+.yp-err { margin: 0; font-weight: 700; color: var(--brick); }
+.yp-ok:focus, .yp-err:focus { outline: none; }
+.yp-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+@media (max-width: 760px) {
+  .yp-page { padding: 14px 16px 28px; }
+  .yp-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Week 8 redesign: icons on each row, and lighter switches when everything is on */
+.yp-rows a { align-items: center; justify-content: flex-start; }
+.yp-row-ic { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--surface); color: var(--river); border: 1px solid var(--line); }
+.yp-row-label { flex: 1; }
+.yp-option.is-on { background: var(--surface); border-color: var(--river); box-shadow: inset 3px 0 0 var(--river); }
+.yp-card { box-shadow: var(--shadow-card); }
+.yp-card .yp-h2 { font-family: var(--font-display); font-size: 21px; font-weight: 700; letter-spacing: -0.015em; }
