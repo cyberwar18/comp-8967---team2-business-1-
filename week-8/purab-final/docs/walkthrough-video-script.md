@@ -1,0 +1,18 @@
+# Walkthrough video script (about 6½ minutes)
+
+Nigel confirmed a walkthrough video is part of the handover (Nov 19). Record the screen at 1440 × 900, with the browser zoom at 100%, sign in as the admin (**admin@pinpoint.demo**, **Admin2026!**) and press **Reset demo** before you start. Each person records their own part; join the clips in order. Short on time? **Tour** in the demo strip walks through the same story in 10 steps.
+
+| Part | Who | Time | Show | Say |
+| --- | --- | --- | --- | --- |
+| 1. What Neighbr is | Purab | 0:40 | The Welcome page: the headline, the street picture, then **Who are you joining as?** | "Neighbr puts Olde Riverside on one shared map. Residents, shops, community groups, the school and the City all use the same app, and each lands on the page made for them." |
+| 2. Report and follow | Purab | 1:00 | As the Resident: **Report a problem**, choose a spot on the map, **Post to the map** or **Send privately**. Then the pothole near Maple & Rye Diner, **Support this instead** | "You decide who sees your report. If a neighbour already reported it, you add your support instead of a duplicate." |
+| 3. The City's side | Bhavana | 1:00 | As Jordan Lee: the work queue, **Overdue**, open *Streetlight out near the pharmacy* and **Assign** it to Sam; as Sam, open *Pothole on Wyandotte at Pierre Ave* and **Mark resolved**; as Jordan, open the pothole under **Closed** and **Publish outcome** (only requests posted to the map can be published, and the streetlight is private). Then **Insights** | "Staff see what's due and what's overdue, hand work to the right team, and report back. The sender only ever sees the City, not staff names." |
+| 4. Closing the loop | Purab | 0:30 | As the Resident: **Requests** with the steps, **Was it fixed?**, the pin and **You said, we did** on the map | "The loop ends where it started: on the map." |
+| 5. Chats | Bhavana | 0:40 | As Maya: her chat with City of Windsor 311; as the Resident, **Report** and **Block** on the scam message | "Every request has its own chat, and people control who can reach them." |
+| 6. Marketplace | Devu | 0:40 | Search "bike", **Free only**, a listing, **See it on the map**, **Message the seller**; as Rosa, **This post has ended** | "Neighbours buy, sell and give things away, always meeting at public spots, and posts leave the map when they end." |
+| 7. Community and permits | Mounika | 0:50 | As Priya: **Create event** at Thompson Parkette with a permit; as Taylor Brooks: **Review**, **Approve**; the event on the map; **Reported content**, **Hide** | "Events in public spaces need a permit approved by Neighbr staff, and reported content gets a clear decision." |
+| 8. School | Devu | 0:30 | As Ms. Laurent: the roadwork alert near the safe routes, **Post a notice** for parents; as Maya, the notice in the bell | "Parents hear about what matters near the school, with no student information anywhere." |
+| 9. You're in control | Purab | 0:30 | **Your profile** and **Settings**, then **EN / FR** | "People choose what neighbours see, who can message them, and what they hear about, in English or French." |
+| 10. The street's report card | Purab | 0:30 | Two windows side by side: **Acknowledge** as Jordan in one, the note in the other. Then **Report card** and a **QR poster** | "Every change shows up for everyone at once, the street can see how it's doing, and a poster on a lamp post is all a neighbour needs to start. Thank you." |
+
+Tips: move the mouse slowly, pause a second after each click, and keep each part to one take. If something goes wrong, press **Reset demo** and record that part again.

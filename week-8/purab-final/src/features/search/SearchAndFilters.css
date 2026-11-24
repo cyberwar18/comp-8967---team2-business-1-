@@ -1,0 +1,234 @@
+/* Search panel over the map (KAN-9). Large text and big targets for older users. */
+
+.search-and-filters {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.saf-head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---- Search box ---- */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 4px 4px 40px;
+  background: var(--ground);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+.search-bar:focus-within {
+  background: var(--surface);
+  border-color: var(--river);
+}
+.search-bar__icon {
+  position: absolute;
+  left: 14px;
+  color: var(--ink-3);
+}
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding: 0;
+  font-size: 15px;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.search-bar input::placeholder { color: var(--ink-3); }
+.search-bar__clear {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.search-bar__clear:hover { background: var(--line); }
+.search-bar__go {
+  height: 40px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--river);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.search-bar__go:hover { background: #174a75; }
+.search-bar__clear:focus-visible,
+.search-bar__go:focus-visible,
+.chip:focus-visible,
+.card:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+/* ---- Chips: one scrollable row ---- */
+.filter-chips {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  margin: 0 -16px;
+  padding: 2px 16px 4px;
+  scrollbar-width: none;
+  /* fade the right edge so it's clear the row scrolls */
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.chip:hover { border-color: #b9c3ca; color: var(--ink); }
+.chip--active,
+.chip--active:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.chip__count {
+  font-weight: 500;
+}
+/* a11y check: the count used opacity 0.7 (3.4:1 contrast); a solid hint colour passes 4.5:1 */
+.chip:not(.chip--active) .chip__count { color: var(--ink-3); }
+
+/* ---- Results ---- */
+.result-count {
+  margin: 0;
+  padding: 14px 16px 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.result-cards {
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 0 8px 8px;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 10px 10px 6px;
+  text-align: left;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  border-radius: var(--r-md);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+.card:hover { background: var(--ground); }
+.card--selected,
+.card--selected:hover {
+  background: var(--river-soft);
+}
+.result-cards li + li .card { border-top: 1px solid transparent; }
+
+/* Street number / date column: the directory look */
+.card__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.card__marker-top {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.card__marker-bottom {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.card__name {
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+.card__meta {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.card__status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.card__status--good { background: var(--moss-soft); color: var(--moss); }
+.card__status--busy { background: var(--amber-soft); color: var(--amber); }
+.card__status--alert { background: var(--brick-soft); color: var(--brick); }
+.card__status--quiet { background: var(--stone-soft); color: var(--ink-2); }
+
+.demo-label {
+  margin: 0;
+  padding: 10px 16px 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-3);
+  border-top: 1px solid var(--line);
+}

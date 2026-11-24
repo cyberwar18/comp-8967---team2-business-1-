@@ -1,0 +1,145 @@
+/* KAN-51 (Bhavana): Chats page. Week 8 redesign: a messenger layout that fills the screen,
+   avatars for every conversation, speech bubbles, and the composer pinned under the thread. */
+.ch-page {
+  height: 100%; box-sizing: border-box; padding: 14px 24px 20px;
+  display: flex; flex-direction: column; gap: 12px;
+  font-size: 15px; line-height: 1.45; overflow: hidden;
+}
+.ch-demo { margin: 0; font-size: 13px; color: var(--ink-3); }
+.ch-layout {
+  flex: 1; min-height: 0;
+  display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 0;
+  width: 100%;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card); overflow: hidden;
+}
+.ch-layout > * { min-width: 0; min-height: 0; }
+
+/* left: the conversation list */
+.ch-list { display: flex; flex-direction: column; padding: 20px 14px 16px; border-right: 1px solid var(--line); overflow-y: auto; background: #fbfcfc; box-shadow: none !important; }
+.ch-list-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 6px; }
+.ch-h1 { margin: 0; font-size: 28px; }
+.ch-list > .ch-muted { margin: 6px 6px 12px; }
+.ch-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.ch-item {
+  display: flex; gap: 12px; align-items: flex-start; width: 100%; box-sizing: border-box; min-width: 0;
+  padding: 12px 10px; border: 0; border-radius: var(--r-md); background: transparent; color: var(--ink);
+  font: inherit; text-align: left; cursor: pointer; transition: background 0.12s ease;
+}
+.ch-item:hover { background: var(--ground); }
+.ch-item.is-current { background: var(--river-soft); }
+.ch-item-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.ch-item-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ch-item-top strong { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ch-item.is-unread .ch-item-top strong { font-weight: 800; }
+.ch-item-time { flex: none; font-size: 12.5px; color: var(--ink-3); }
+.ch-item.is-unread .ch-item-time { color: var(--river); font-weight: 700; }
+.ch-item-label { font-size: 12.5px; color: var(--ink-3); }
+.ch-item-foot { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.ch-item-last { flex: 1; min-width: 0; font-size: 13.5px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ch-item.is-unread .ch-item-last { color: var(--ink); font-weight: 600; }
+.ch-new { flex: none; padding: 1px 8px; border-radius: 999px; background: var(--river); color: #fff; font-size: 11.5px; font-weight: 800; }
+.ch-empty { margin: 8px 6px; color: var(--ink-2); }
+
+.ch-setting { margin: auto 6px 0; padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.ch-setting label { font-weight: 700; }
+.ch-setting select { border-radius: 999px !important; padding: 8px 14px !important; }
+
+/* right: the conversation */
+.ch-pane { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+.ch-thread { flex: 1; min-height: 0; display: flex; flex-direction: column; box-shadow: none !important; }
+.ch-thread-head { flex: none; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px; padding: 16px 22px; border-bottom: 1px solid var(--line); }
+.ch-thread-who { display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1 1 340px; }
+.ch-thread-id { min-width: 0; }
+.ch-eyebrow { margin: 0; }
+.ch-title { margin: 0; font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.015em; }
+.ch-title:focus { outline: none; }
+.ch-thread-head .ch-muted { margin: 2px 0 0; font-size: 13.5px; }
+.ch-lock { vertical-align: -2px; margin-right: 4px; color: var(--moss); }
+.ch-muted { margin: 0 0 12px; color: var(--ink-2); font-size: 14px; }
+.ch-tools { flex: none; }
+.ch-tools .ch-hint { max-width: 260px; }
+.ch-confirm { max-width: 420px; padding: 12px 14px; border: 1px solid #f0b8ab; border-radius: var(--r-md); background: var(--brick-soft); }
+.ch-confirm p { margin: 0 0 10px; font-size: 14px; }
+.ch-confirm .ch-btn { margin-right: 8px; }
+.ch-thread > div[aria-live] { flex: none; padding: 0 22px; }
+.ch-ok { margin: 12px 0 0; padding: 9px 14px; background: var(--moss-soft); color: var(--moss); border-radius: var(--r-md); font-weight: 600; font-size: 14px; }
+.ch-empty--thread { flex: 1; display: grid; place-items: center; margin: 0; color: var(--ink-3); }
+
+.ch-messages {
+  flex: 1; min-height: 0; overflow-y: auto;
+  list-style: none; margin: 0; padding: 22px 22px 12px;
+  display: flex; flex-direction: column; gap: 14px;
+  background: linear-gradient(var(--surface), var(--surface)) padding-box;
+}
+.ch-msg { display: flex; align-items: flex-start; gap: 10px; max-width: min(78%, 620px); }
+.ch-msg.is-mine { align-self: flex-end; flex-direction: row-reverse; }
+.ch-msg-av { flex: none; margin-top: 24px; }
+.ch-msg-body { min-width: 0; display: flex; flex-direction: column; }
+.ch-msg.is-mine .ch-msg-body { align-items: flex-end; }
+.ch-msg-who { margin: 0 0 4px 4px; font-size: 12.5px; color: var(--ink-3); }
+.ch-msg.is-mine .ch-msg-who { margin: 0 4px 4px 0; }
+.ch-msg-who strong { color: var(--ink-2); font-weight: 700; }
+.ch-msg-who span { margin-left: 6px; }
+.ch-msg-text {
+  margin: 0; padding: 11px 15px; border-radius: 18px 18px 18px 6px;
+  background: var(--ground); border: 1px solid var(--line);
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.ch-msg.is-mine .ch-msg-text { background: var(--river); border-color: var(--river); color: #fff; border-radius: 18px 18px 6px 18px; }
+.ch-msg-text.is-removed { font-style: italic; color: var(--ink-3); background: var(--stone-soft); }
+.ch-reported { margin: 6px 4px 0; font-size: 13px; font-weight: 600; color: var(--amber); }
+.ch-link { display: inline-flex; align-items: center; gap: 4px; margin: 4px 0 0 4px; padding: 4px 6px; background: none; border: 0; border-radius: 6px; color: var(--ink-3); font: inherit; font-size: 12.5px; cursor: pointer; }
+.ch-link:hover { color: var(--brick); background: var(--brick-soft); }
+.ch-report { margin-top: 8px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+
+/* the composer */
+.ch-send { flex: none; margin: 0; padding: 14px 22px 18px; border-top: 1px solid var(--line); background: #fbfcfc; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 10px; align-items: end; }
+.ch-send > label { grid-column: 1 / -1; font-weight: 700; font-size: 13.5px; color: var(--ink-2); }
+.ch-send textarea { grid-column: 1; height: 52px; min-height: 48px; resize: vertical; border-radius: 16px !important; padding: 12px 16px !important; }
+.ch-send > .ch-btn--send { grid-column: 2; grid-row: 2; align-self: end; }
+.ch-send > .ch-hint, .ch-send > .ch-error { grid-column: 1 / -1; }
+.ch-thread--compose .ch-send { display: flex; flex-direction: column; align-items: stretch; border-top: 0; background: transparent; padding-top: 18px; }
+.ch-thread--compose .ch-send select { border-radius: 999px !important; padding: 9px 14px !important; }
+.ch-thread--compose .ch-send textarea { min-height: 120px; }
+.ch-send label, .ch-report label { font-weight: 700; font-size: 14px; }
+.ch-send textarea, .ch-send select, .ch-report select, .ch-report input, .ch-setting select {
+  max-width: 100%; box-sizing: border-box; font: inherit; padding: 8px 10px;
+  border: 1px solid #b9c5cd; border-radius: var(--r-sm); background: var(--surface); color: var(--ink);
+}
+.ch-send textarea:focus-visible, .ch-send select:focus-visible, .ch-report select:focus-visible, .ch-report input:focus-visible, .ch-setting select:focus-visible { outline: none; box-shadow: var(--focus); border-color: var(--river); }
+.ch-locked { flex: none; margin: 0; padding: 14px 22px; border-top: 1px solid var(--line); background: var(--stone-soft); font-size: 14px; }
+
+/* buttons */
+.ch-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  min-height: 40px; padding: 0 16px; border: 1px solid #c3ced6; border-radius: 999px;
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer;
+}
+.ch-btn:hover { border-color: #8ea0ad; }
+.ch-btn--primary { background: var(--river); border-color: var(--river); color: #fff; }
+.ch-btn--primary:hover { background: var(--river-deep); border-color: var(--river-deep); }
+.ch-btn--new { min-height: 38px; padding: 0 14px 0 11px; }
+.ch-btn--send { min-height: 48px; padding: 0 20px 0 16px; }
+.ch-btn--danger { border-color: var(--brick); color: var(--brick); }
+.ch-btn--danger:hover { background: var(--brick-soft); }
+.ch-btn:focus-visible, .ch-item:focus-visible, .ch-link:focus-visible, .ch-back:focus-visible { outline: none; box-shadow: var(--focus); }
+.ch-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.ch-back { display: inline-flex; align-items: center; gap: 6px; flex-basis: 100%; margin: 0; padding: 4px 0; background: none; border: 0; color: var(--river); font: inherit; font-weight: 700; cursor: pointer; }
+
+.ch-hint { margin: 2px 0 0; font-size: 12.5px; color: var(--ink-3); }
+.ch-error { margin: 4px 0 0; color: var(--brick); font-weight: 600; font-size: 14px; }
+
+/* the empty pane */
+.ch-pane-empty { flex: 1; margin: 0 !important; border: 0 !important; border-radius: 0 !important; min-height: 0 !important; }
+.ch-pane-sub { display: block; max-width: 320px; font-size: 14px; font-weight: 400; color: var(--ink-3); }
+
+@media (max-width: 720px) {
+  .ch-page { height: auto; min-height: 100%; overflow: visible; padding: 12px 12px 88px; }
+  .ch-layout { grid-template-columns: 1fr; border-radius: var(--r-md); overflow: visible; }
+  .ch-list { border-right: 0; overflow: visible; }
+  .ch-pane, .ch-thread { overflow: visible; }
+  .ch-messages { overflow: visible; padding: 16px 14px; }
+  .ch-thread-head, .ch-send { padding-left: 14px; padding-right: 14px; }
+  .ch-msg { max-width: 100%; }
+}

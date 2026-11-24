@@ -1,0 +1,83 @@
+/* Onboarding (Sprint 6, Purab), redesigned for the pitch (Week 8). */
+.wl-page { height: 100%; overflow-y: auto; box-sizing: border-box; padding: 0 0 48px; }
+
+/* hero: the night-street band continues from the header */
+.wl-hero { background: var(--night); color: var(--on-night); padding: 40px 24px 0; overflow: hidden; }
+.wl-hero-inner {
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 32px; align-items: end;
+}
+.wl-hero-copy { padding-bottom: 44px; }
+.wl-kicker { margin: 0 0 14px; color: var(--lamp); font-weight: 700; font-size: 15px; }
+.wl-hero-title {
+  margin: 0; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(38px, 5.2vw, 64px); line-height: 1.02; letter-spacing: -0.03em; color: #fff;
+}
+.wl-hero-lead { margin: 18px 0 0; max-width: 34em; color: var(--on-night-2); font-size: 17px; line-height: 1.55; }
+.wl-points { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.wl-points li { position: relative; padding-left: 22px; color: var(--on-night); font-size: 15px; }
+.wl-points li::before {
+  content: ''; position: absolute; left: 0; top: 0.5em; width: 9px; height: 9px; border-radius: 50%; background: var(--lamp);
+}
+.wl-art { display: block; width: 100%; height: auto; }
+
+/* the chooser */
+.wl-inner { max-width: 1120px; margin: 0 auto; padding: 32px 24px 0; }
+.wl-title { margin: 0 0 6px; font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+.wl-lead { margin: 0 0 8px; max-width: 640px; color: var(--ink-2); font-size: 16px; }
+.wl-group h2 { margin: 26px 0 12px; font-size: 18px; font-weight: 700; color: var(--ink); }
+.wl-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.wl-card {
+  position: relative; display: flex; flex-direction: column; gap: 4px; width: 100%; height: 100%; box-sizing: border-box;
+  padding: 18px 18px 18px 22px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); color: var(--ink);
+  font: inherit; text-align: left; cursor: pointer; overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+/* a colour edge says which group a card belongs to (the group is also the section title) */
+.wl-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--river); }
+.wl-card--organizations::before { background: var(--moss); }
+.wl-card--staff::before { background: var(--night); }
+.wl-card:hover { border-color: #9fb3bf; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16, 34, 51, 0.08); }
+.wl-card:focus-visible { outline: none; box-shadow: var(--focus); }
+.wl-card.is-current { border-color: var(--river); background: var(--river-soft); }
+.wl-card-title { font-family: var(--font-display); font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+.wl-card-name { font-size: 13px; color: var(--ink-2); }
+.wl-card-text { margin-top: 6px; font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+.wl-card-tag { position: absolute; top: 14px; right: 14px; padding: 1px 9px; border-radius: 999px; background: var(--lamp); color: var(--night); font-size: 12px; font-weight: 800; }
+
+.wl-confirm { max-width: 600px; margin-top: 20px; padding: 28px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-float); }
+.wl-confirm h2 { margin: 0; font-size: 28px; font-weight: 700; }
+.wl-confirm h2:focus { outline: none; }
+.wl-role { margin: 4px 0 10px; font-weight: 700; color: var(--river); }
+.wl-steps { list-style: none; margin: 16px 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.wl-steps li { display: grid; grid-template-columns: 150px 1fr; gap: 10px; font-size: 14px; }
+.wl-steps span { color: var(--moss); font-weight: 600; }
+.wl-actions { display: flex; gap: 10px; margin-top: 10px; }
+.wl-btn { min-height: 46px; padding: 0 22px; border: 1px solid #b9c5cd; border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.wl-btn--primary { border-color: var(--river); background: var(--river); color: #fff; }
+.wl-btn--primary:hover { background: var(--river-deep); }
+.wl-btn:focus-visible { outline: none; box-shadow: var(--focus); }
+
+@media (max-width: 860px) {
+  .wl-hero { padding-top: 28px; }
+  .wl-hero-inner { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .wl-hero-copy { padding-bottom: 20px; }
+}
+@media (max-width: 720px) {
+  .wl-inner { padding: 24px 16px 0; }
+  .wl-hero { padding: 24px 16px 0; }
+  .wl-title { font-size: 25px; }
+  .wl-steps li { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* Week 8: the tour and report card buttons in the hero */
+.wl-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.wl-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 999px;
+  border: 1px solid var(--night-line); background: transparent; color: var(--on-night);
+  font: inherit; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer;
+}
+.wl-cta-btn:hover { background: var(--night-2); color: #fff; }
+.wl-cta-btn--lamp { background: var(--lamp); border-color: var(--lamp); color: var(--night); }
+.wl-cta-btn--lamp:hover { background: #f6cf6e; color: var(--night); }
+.wl-cta-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--night), 0 0 0 4px var(--lamp); }

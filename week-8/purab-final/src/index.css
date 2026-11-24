@@ -1,0 +1,85 @@
+/*
+ * Design tokens for the whole app (pitch redesign, Week 8).
+ * Olde Riverside at dusk: a night-river navy header, petrol blue as the working colour,
+ * street-lamp yellow as the one highlight. Brick, park green and amber keep their meanings
+ * (problems, open/resolved, in progress) so every status reads the same as before.
+ * Familjen Grotesk for titles and the brand, Public Sans (a civic typeface) for everything else.
+ */
+:root {
+  --font: 'Public Sans Variable', 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Familjen Grotesk Variable', 'Familjen Grotesk', var(--font);
+
+  --night: #0e2233;        /* header: the river after dark */
+  --night-2: #16324a;      /* raised parts of the header */
+  --night-line: #28465f;   /* lines on the header */
+  --on-night: #f3f7fa;     /* text on the header */
+  --on-night-2: #b8c8d6;   /* secondary text on the header */
+  --lamp: #f2c14e;         /* street-lamp yellow: the one highlight (active section, demo badge) */
+  --lamp-soft: #fdf3d6;
+
+  --ink: #102233;          /* main text */
+  --ink-2: #46586a;        /* secondary text */
+  --ink-3: #56687a;        /* hints (4.5:1 on white and on the page background) */
+  --ground: #f4f7f7;       /* page background: cool paper */
+  --surface: #ffffff;      /* panels and cards */
+  --line: #dfe6ea;         /* borders */
+  --river: #0d5f73;        /* main colour: buttons, links, active states, clusters */
+  --river-deep: #094a5a;   /* pressed / hover */
+  --river-soft: #e3f1f4;
+  --moss: #23704a;         /* open, resolved, published */
+  --moss-soft: #e2f3e9;
+  --amber: #9c4f05;        /* in progress, temporarily closed */
+  --amber-soft: #fdf0de;
+  --brick: #b3321f;        /* reported problems */
+  --brick-soft: #fce8e4;
+  --stone-soft: #eceff1;   /* past, vacant */
+
+  --r-sm: 9px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --shadow-card: 0 1px 2px rgba(16, 34, 51, 0.05);
+  --shadow-float: 0 1px 2px rgba(16, 34, 51, 0.06), 0 12px 32px rgba(16, 34, 51, 0.14);
+  --focus: 0 0 0 3px #ffffff, 0 0 0 5px var(--river);
+}
+
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--ground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'tnum' 0;
+}
+button, input, select, textarea { font-family: inherit; }
+
+/* Titles carry the personality: page and section titles use the display face, tightened a little. */
+h1, h2 {
+  font-family: var(--font-display);
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+h1 { font-weight: 700; }
+p { text-wrap: pretty; }
+
+::selection { background: var(--lamp); color: var(--ink); }
+
+a { color: var(--river); }
+a:hover { color: var(--river-deep); }
+
+/* Form fields share one calm look across every page. */
+input[type='text'], input[type='search'], input[type='number'], input[type='date'], input[type='time'], input:not([type]), select, textarea {
+  border-color: #b9c5cd;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+input[type='text']:hover, input[type='search']:hover, input[type='number']:hover, input:not([type]):hover, select:hover, textarea:hover {
+  border-color: #8ea0ad;
+}
+input[type='checkbox'], input[type='radio'] { accent-color: var(--river); }
+
+/* Scrollbars: thin and quiet where the browser allows it */
+* { scrollbar-width: thin; scrollbar-color: #c3ced6 transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

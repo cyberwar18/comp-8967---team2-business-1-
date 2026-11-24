@@ -1,0 +1,113 @@
+/* Week 8 (Purab): sign-in page. A night street on the left, the form on the right. */
+.lg {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(320px, 5fr) 7fr;
+  background: var(--ground);
+  font-family: var(--font);
+  color: var(--ink);
+}
+.lg-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 44px;
+  background: var(--night);
+  color: var(--on-night);
+  overflow: hidden;
+}
+.lg-brand { display: flex; align-items: center; gap: 10px; }
+.lg-brand .shell-mark { width: 38px; height: 38px; border-radius: 12px; background: var(--lamp); color: var(--night); display: grid; place-items: center; }
+.lg-brand-name { font-family: var(--font-display); font-size: 26px; font-weight: 700; letter-spacing: -0.02em; }
+.lg-side-line {
+  margin: auto 0 28px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: #fff;
+}
+.lg-street { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 -44px -40px; width: calc(100% + 88px); max-width: none; }
+
+.lg-main { display: grid; place-items: center; padding: 56px 24px; }
+.lg-langs { position: absolute; top: 20px; right: 24px; display: inline-flex; padding: 2px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.lg-langs button { min-height: 30px; padding: 0 12px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-2); font: 800 12px var(--font); cursor: pointer; }
+.lg-langs button[aria-pressed='true'] { background: var(--night); color: #fff; }
+.lg-langs button:focus-visible { outline: none; box-shadow: var(--focus); }
+
+.lg-card { width: 100%; max-width: 440px; }
+.lg-card h1 { margin: 0 0 8px; font-family: var(--font-display); font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; }
+.lg-lead { margin: 0 0 22px; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+.lg-return { display: flex; gap: 8px; align-items: flex-start; margin: 0 0 18px; padding: 10px 12px; border-radius: var(--r-sm); background: #eaf3f6; color: #0f4c5c; font-size: 14px; }
+.lg-return .ic { flex: none; margin-top: 2px; }
+
+.lg-summary-wrap:focus { outline: none; }
+.lg-summary { margin: 0 0 16px; padding: 12px 14px; border: 1px solid #e7b4a8; border-left: 4px solid var(--brick); border-radius: var(--r-sm); background: #fdf1ee; font-size: 14px; }
+.lg-summary p { margin: 0; font-weight: 700; color: #7a2414; }
+.lg-summary p.lg-tries { margin-top: 4px; font-weight: 500; }
+.lg-summary ul { margin: 6px 0 0; padding-left: 18px; }
+.lg-summary a { color: #7a2414; }
+
+.lg-form { display: grid; gap: 16px; }
+.lg-field label { display: block; margin-bottom: 6px; font-weight: 700; font-size: 14px; }
+.lg-field input {
+  box-sizing: border-box; width: 100%; min-height: 46px; padding: 0 14px;
+  border: 1.5px solid var(--line); border-radius: var(--r-sm); background: var(--surface);
+  font: 16px var(--font); color: var(--ink);
+}
+.lg-field input:focus-visible { outline: none; border-color: var(--river); box-shadow: var(--focus); }
+.lg-field--bad input { border-color: var(--brick); }
+.lg-err { display: flex; gap: 6px; align-items: center; margin: 6px 0 0; color: #a3301b; font-size: 13.5px; font-weight: 600; }
+.lg-pw { position: relative; }
+.lg-pw input { padding-right: 104px; }
+.lg-show {
+  position: absolute; top: 50%; right: 6px; transform: translateY(-50%);
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px;
+  border: 0; border-radius: 8px; background: transparent; color: var(--ink-2); font: 700 13px var(--font); cursor: pointer;
+}
+.lg-show:hover { background: var(--ground); }
+.lg-show:focus-visible { outline: none; box-shadow: var(--focus); }
+.lg-submit {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; margin-top: 4px;
+  border: 0; border-radius: var(--r-sm); background: var(--night); color: #fff; font: 700 16px var(--font); cursor: pointer;
+}
+.lg-submit:hover { background: var(--night-2); }
+.lg-submit:focus-visible { outline: none; box-shadow: var(--focus); }
+.lg-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.lg-demo { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 14px; }
+.lg-demo summary { cursor: pointer; font-weight: 700; font-size: 15px; padding: 6px 0; }
+.lg-demo summary:focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.lg-demo-note { margin: 6px 0 10px; font-size: 14px; color: var(--ink-2); }
+.lg-demo ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; max-height: 340px; overflow: auto; }
+.lg-acc { display: flex; align-items: center; gap: 12px; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); }
+.lg-acc--admin { border-color: var(--lamp); background: #fff8e1; }
+.lg-acc-who { flex: 1; min-width: 0; display: grid; font-size: 13.5px; line-height: 1.35; }
+.lg-acc-who span { color: var(--ink-2); }
+.lg-acc-who code { font-size: 12.5px; color: var(--ink-3); overflow-wrap: anywhere; }
+.lg-acc button { flex: none; min-height: 34px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font: 700 13px var(--font); color: var(--ink); cursor: pointer; }
+.lg-acc button:hover { border-color: var(--river); color: var(--river); }
+.lg-acc button:focus-visible { outline: none; box-shadow: var(--focus); }
+.lg-demo-only { margin: 10px 0 0; font-size: 12.5px; color: var(--ink-3); }
+
+/* the shell's member strip: who is signed in, and sign out */
+.viewas-who { display: inline-flex; align-items: center; gap: 6px; min-width: 0; color: var(--on-night-2); }
+.viewas-who strong { color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.viewas-who span { color: var(--on-night-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.viewas-who span::before { content: ''; display: inline-block; width: 4px; height: 4px; margin: 0 8px 3px 2px; border-radius: 50%; background: var(--lamp); }
+.viewas-tag--admin { background: var(--lamp) !important; color: var(--night) !important; }
+
+@media (max-width: 860px) {
+  .lg { grid-template-columns: 1fr; }
+  .lg-side { padding: 18px 20px 0; min-height: 0; }
+  .lg-side-line { margin: 16px 0 10px; font-size: 28px; }
+  .lg-street { margin: 0 -20px; width: calc(100% + 40px); max-height: 110px; }
+  .lg-main { padding: 28px 18px 40px; place-items: start center; }
+  .lg-langs { top: 16px; right: 16px; }
+  .lg-card h1 { font-size: 28px; }
+}
+@media (max-width: 480px) {
+  .viewas-who span { display: none; }
+}
