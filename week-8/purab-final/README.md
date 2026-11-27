@@ -1,3 +1,7 @@
+Final code and documentation: see [`week-8/purab-final`](week-8/purab-final).
+
+**Live demo:** https://cyberwar18.github.io/pinpoint-demo/ (sign in as `admin@pinpoint.demo` / `Admin2026!` to switch between all 11 user types)
+
 # PinPoint – Neighbr front-end shell
 
 **Team 2 – PinPoint** · COMP 8967 · Business partner: Commonfield Systems Inc. / Neighbr
@@ -6,9 +10,10 @@ The shared map is the main screen. A resident lands on the Olde Riverside corrid
 
 ## Run it
 
-Needs Node.js 20 or newer.
+Needs Node.js 20 or newer. Run the final version from its folder:
 
 ```
+cd week-8/purab-final
 npm install
 npm run dev      # open the link it prints, usually http://localhost:5173
 npm test         # 570 tests
@@ -31,55 +36,9 @@ This rewrites only the coordinates in `src/data/mock-data.json`.
 
 On Windows PowerShell, if `npm` is blocked, run once: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`.
 
-## Week 8 (Nov 16–22): pitch redesign, testing and handover
-
-| Change | Where | Owner |
-| --- | --- | --- |
-| **Pitch redesign**: a new look across every page. A dark "night street" header and demo strip with street-lamp yellow marking the section you're in; Familjen Grotesk for titles and Public Sans for text, both bundled so the demo works offline; petrol blue as the working colour (status colours unchanged); sentence-case labels; empty panes that say what to do; a compact demo strip on phones. The **Welcome page** is now a pitch hero with an illustration of the Wyandotte corridor | `src/index.css` (colours and type), `src/app/polish.css` (shared polish), `src/app/AppShell.css` (header), `src/app/Welcome.tsx` and `Welcome.css` | Purab, for the team |
-| **Redesign, second pass: inside every feature.** One icon set (`src/app/Icon.tsx`) and one avatar (`src/app/Avatar.tsx`) used everywhere. **Map**: teardrop pins with each layer's icon instead of letters, request status as a ring around the pin head, navy clusters with a lamp ring. **Report a problem**: an icon per problem type, a real "Add a photo" button, a lock and a globe on "Who can see it?". **Requests**: each request carries its category icon on a tile coloured by where it is; a page header, a stepper with checkmarks, coloured status chips and the record as a timeline. **Chats**: a full-height messenger with avatars, last-message times, speech bubbles and the composer pinned at the bottom. **Bell**: an icon for each kind of notification. **Community**: an icon for each kind of organization and calendar tiles for dates. **School**: icons on the roadwork alert, each safe route and each notice. **Updates**: balanced columns and an icon for each section. **Review**: a staff shield, calendar tiles and a file chip on each permit. **Marketplace**: full width, coloured seller avatars, cards that lift. **Profile** and **Insights**: icons on each row, large numbers. "Show me on the map" is now a switch. Screenshots before and after: `docs/evidence/week-8-redesign/` | `src/app/`, every feature folder | Purab, for the team |
-| **Six pitch features.** **1. Live sync**: open the app in two windows (say, the Resident and Jordan Lee side by side); a change in one shows in the other within a second, with an "Updated from another window" note. **2. QR posters** (`#/posters`): a printable poster for every place on the corridor; scanning it opens **Report a problem** with the place already chosen, and the form says it came from a poster. Each place card links to its poster. **3. Guided tour**: **Tour** in the demo strip or **Take the 2-minute tour** on the Welcome page; 10 steps that switch to the right person and page, from a QR report to the City, Maya, Chats, the Marketplace, Priya, Neighbr staff and the report card. **4. Corridor report card** (`#/report-card`): requests sent, % resolved, average days to fix, "was it fixed?" answers, support instead of duplicates, by category and by organization, and what was fixed recently; private requests are counted but never shown; printable. **5. Smart suggestion**: **Describe it in your own words** in Report a problem suggests the problem and the place (English or French), with **Use this**. **7. English and French**: an EN / FR switch in the demo strip; the navigation, demo strip, Welcome page, Report a problem, the tour, the report card and the posters are in both languages, and the page language is set for screen readers. 17 new tests (`src/features/corridor/week8.test.tsx`); screenshots in `docs/evidence/week-8-features/` | `src/data/api.ts` (sync, report card), `src/app/i18n.tsx`, `src/app/Tour.tsx`, `src/features/corridor/`, `src/features/report/routing.ts` and `ReportProblem.tsx` | Purab, for the team |
-| **Sign-in for everyone, and an admin.** The app opens on a **Sign in to Neighbr** page. Every person in the demo has their own account, and one **admin** account keeps **Viewing as**, the tour and Reset demo, so it can switch between everyone to show the whole workflow. A member only ever sees themselves, with **Sign out**. The form checks both fields before signing in (filled in, a real email, 8+ characters), gives one message for a wrong email or password (so it never reveals which emails have accounts), and waits 30 seconds after 5 wrong tries; errors show next to each field and in a summary that screen readers announce, in English or French. A QR poster opened before signing in goes straight to its form afterwards. Each browser tab has its own sign-in, so two windows can be two different people. This is a front-end demo: Neighbr's real sign-in replaces `signInWith()` in `src/app/auth.ts`. 12 new tests (`src/app/login.test.tsx`) | `src/app/auth.ts`, `LoginPage.tsx`, `Login.css`, `App.tsx`, `ViewAs.tsx` | Purab |
-| **French on every page.** EN / FR used to change only the menu, the strips, Welcome, Report a problem, the tour, the report card and the posters. Now Requests, Community, Updates, Chats, the Marketplace, Review, Profile and the map panels switch too: buttons, labels, filters, statuses, empty states, dates and times ("sam. 5 déc. · 13 h"), and the labels screen readers use. Text people wrote themselves (request titles, messages, listings) stays as written, as it would in Neighbr. English comes back when EN is chosen. 3 new tests (`src/app/frPages.test.tsx`) | `src/app/frPages.ts`, `src/app/PageTranslator.tsx` | Purab |
-| **Bug hunt**: every page for all 11 user types on desktop and a 390 px phone (220 page views, including the report card and posters): 0 crashes, 0 console errors, nothing scrolls sideways, **0 accessibility issues** (axe-core, WCAG 2.1 A/AA) after fixing one (the Community page's scrolling panel can now be reached by keyboard). A test that broke on Nov 21 because it used today's date is fixed, and the whole suite was run as if today were Dec 1 and Dec 10: all pass (570 tests now) | `CommunityPage.tsx`, `neighbourhood.test.ts` | Purab, for the team |
-| **Handover for Neighbr**: every data function with a suggested endpoint and the privacy rules the backend must keep ([`docs/handover/backend-api.md`](docs/handover/backend-api.md)); setup notes ([`docs/handover/setup.md`](docs/handover/setup.md)) | `docs/handover/` | Purab, Mounika |
-| **User testing kit** (Nigel, Nov 19: "test with friends and other people"): 10 tasks, questions to ask, how to log problems in Jira, a results table ([`docs/user-testing/testing-kit.md`](docs/user-testing/testing-kit.md)) | `docs/user-testing/` | Everyone runs it with 2+ people |
-| **Walkthrough video script**: 9 parts, about 6 minutes, who records what ([`docs/walkthrough-video-script.md`](docs/walkthrough-video-script.md)) | `docs/` | Everyone |
-
-Still to do by people, not code: run the testing sessions, fix what testers find, record the video.
-
-
-### Demo accounts
-
-| Who | Email | Password |
-|---|---|---|
-| **Admin** (switches between everyone, runs the tour) | admin@pinpoint.demo | Admin2026! |
-| Team 2 Group 10, resident | team2@pinpoint.demo | Demo2026! |
-| Maya R., resident and school parent | maya@pinpoint.demo | Demo2026! |
-| Rosa's Bakery, business owner | rosa@pinpoint.demo | Demo2026! |
-| Priya Nair, community organizer | priya@pinpoint.demo | Demo2026! |
-| Ms. Laurent, school staff | laurent@pinpoint.demo | Demo2026! |
-| Sofia Mendes, library staff | sofia@pinpoint.demo | Demo2026! |
-| Jordan Lee, City 311 intake lead | jordan@pinpoint.demo | Demo2026! |
-| Sam Patel, City roads crew | sam@pinpoint.demo | Demo2026! |
-| Alex Moreau, BIA coordinator | alex@pinpoint.demo | Demo2026! |
-| Taylor Brooks, Neighbr staff | taylor@pinpoint.demo | Demo2026! |
-| Ward Councillor | councillor@pinpoint.demo | Demo2026! |
-
-They are also listed under **Demo accounts** on the sign-in page, with a button that fills them in.
-
-## Sprint 7 (Nov 9–15): final week, feature complete
-
-Every feature planned for the final demo is in this build: the map, Requests, Community and School, Updates, **Chats**, **Marketplace**, **Review** (Neighbr staff), and **Your profile and Settings**. Week 8 is refinements only. For a 10-minute walkthrough that shows every user type, see [`docs/final-demo-script.md`](docs/final-demo-script.md).
-
-
-| Change | Where | Owner |
-| --- | --- | --- |
-| **Chats** (`#/chats`): people and organizations message each other safely. A chat linked to each request (the sender sees the organization, not staff names); organizations (community group, school, library, BIA) message their members; **block**, **report a message** to Neighbr staff, **"Who can message me"**; new messages in the **notification bell**. Functions for the team: `startChat` (Message the seller), `getMessageReports` (reported content queue), `get/setMessageSetting` (settings page) | `src/features/chats/`, chat functions in `src/data/api.ts`, `RequestDetail.tsx`, sample chats in `src/data/mock-data.json`; [`docs/KAN-51-chats.md`](docs/KAN-51-chats.md), screenshots in `docs/evidence/sprint-7-KAN-51-bhavana/` (KAN-51) | Bhavana |
-| **Marketplace** (`#/marketplace`): For sale, Free, Wanted, Services and Business offers with picture, price and area; create a listing; search and filters (kind, price, Free only, distance); listings as pins on the map (new layer) with a link back; **Message the seller** (opens a chat); **report a listing** to the Neighbr staff queue; **map posts expire**: after the end date a listing, a business post or an offer leaves the map and its owner gets "This post has ended" in the bell (KAN-53) | `src/features/marketplace/`, `listingPins` / `endedPostNotifications` and the listing functions in `src/data/api.ts`, `extras.ts`, `CorridorMap.tsx`, `docs/KAN-53-marketplace.md` | Devu |
-| **Event permits and Neighbr moderation** (`#/review`): a new **Neighbr staff** user type; an event in a public place needs a **permit upload**, approved by an organizer and then by Neighbr staff before it goes on the map (**Approve, Decline with a reason, Ask for more information**); a **reported content queue** for chats, listings and business posts (**Hide or Keep**); **Report this post**; senders are notified of every decision (KAN-52) | `src/features/moderation/`, permit and report functions at the end of `src/data/api.ts`, `CommunityPage.tsx` (permit upload and status), `chats.ts` (removed messages), `UpdatesPage.tsx`; [`docs/KAN-52-event-permits-moderation.md`](docs/KAN-52-event-permits-moderation.md), screenshots in `docs/evidence/sprint-7-KAN-52-mounika/` (KAN-52) | Mounika |
-| **Your profile and Settings** (`#/profile`, from **Your profile** in the Viewing as strip): who you are, what neighbours can see and what stays private, links to your requests, chats and listings; **Settings**: who can message me (Bhavana's rule), which **notifications** reach the bell (requests, messages, area alerts, community and school, Marketplace), and a **home area** (a public place, never an address) that area alerts and Marketplace distances follow. **Phone fix**: nothing scrolls sideways at 390 px. **Final merge** of KAN-51, KAN-53 and KAN-52; sample dates moved so events, the ward poll and the hydrant alert are still current for the final demo; a date-dependent school test fixed (KAN-50) | `src/features/profile/`, `getSettings` / `saveSettings` / `effectivePersona` / `getProfileSummary` in `src/data/api.ts`, `App.tsx`, `ViewAs.tsx`, `AppShell.css`; [`docs/KAN-50-profile-settings.md`](docs/KAN-50-profile-settings.md), screenshots in `docs/evidence/sprint-7-KAN-50-purab/` | Purab |
-
 ## Sprint 6 (Nov 2–8): user types, onboarding and Nigel's Nov 2 feedback
+
+*This section and the code at the top of this repository are the Sprint 6 version (10 user types, 332 tests). The final version in `week-8/purab-final` has 11 user types and 570 tests.*
 
 **Start here:** [`docs/sprint-6-purab-bhavana.md`](docs/sprint-6-purab-bhavana.md): what Nigel asked at office hours on Nov 2, what changed, a 5-minute walkthrough and screenshots (`docs/evidence/sprint-6/`).
 
@@ -87,7 +46,7 @@ Every feature planned for the final demo is in this build: the map, Requests, Co
 
 **Team merge (Nov 8):** this build also has Mounika's KAN-48 ([`docs/KAN-48-community-journey.md`](docs/KAN-48-community-journey.md), screenshots in `docs/evidence/sprint-6-KAN-48-mounika/`) and Devu's KAN-47 ([`docs/KAN-47-request-outcomes-on-map.md`](docs/KAN-47-request-outcomes-on-map.md), screenshots in `docs/evidence/sprint-6-KAN-47-devu/`). Their screenshots were taken on their own branches before the merge, so the top bar there looks older.
 
-The first visit opens **onboarding**: pick who you are joining as and you land on your own page. **Viewing as** (the strip under the top bar) switches between 11 user types at any time; **Reset demo** goes back to the sample data.
+The first visit opens **onboarding**: pick who you are joining as and you land on your own page. **Viewing as** (yellow strip) switches between 10 user types at any time; **Reset demo** goes back to the sample data.
 
 ### Progress note (Nov 8)
 
@@ -111,7 +70,7 @@ The first visit opens **onboarding**: pick who you are joining as and you land o
 
 **Start here:** [`docs/sprint-5-connected-journey.md`](docs/sprint-5-connected-journey.md). It answers Nigel's Week 6 message: the walkthrough of one complete journey (resident → City 311 → resident, and business → BIA → business), what happens when a request is declined, needs more information or someone isn't allowed, what we tested and changed, what works / is simulated / remains, and the plan to the final deliverable.
 
-To follow it in the app: `npm run dev`, then use **Viewing as** (the strip under the top bar) to switch between the resident, the business owner, City 311 staff, the BIA coordinator and the councillor. Sign-in is simulated.
+To follow it in the app: `npm run dev`, then use **Viewing as** (yellow strip under the top bar) to switch between the resident, the business owner, City 311 staff, the BIA coordinator and the councillor. Sign-in is simulated.
 
 ### Progress note
 
@@ -180,10 +139,6 @@ src/
     requests/          Requests: rules, My requests (Purab), organization work queue (Bhavana), Sprint 5
     school/            School workspace: roadwork alert, safe walking routes, parent notices (Devu, KAN-43); requests to the City (KAN-47)
     updates/           Updates page: area alerts (Bhavana), ward polls (Mounika), roadwork impact for businesses (Devu), recently fixed (Sprint 6)
-    chats/             Chats: request chats, organization chats, block, report (Bhavana, KAN-51)
-    marketplace/       Marketplace: listings, search and filters, map pins, expiring posts (Devu, KAN-53)
-    moderation/        Review for Neighbr staff: event permits, reported content (Mounika, KAN-52)
-    profile/           Your profile and Settings (Purab, KAN-50)
 ```
 
 ## How the pieces connect
@@ -204,16 +159,16 @@ Visible focus outlines, labelled controls, `aria-current` on the active section,
 
 | Member | Contribution |
 | --- | --- |
-| Purab Singh Mohan | App shell and navigation, phone layout and bottom sheet, visual design (type, colours, street-directory result list, pins and popup), collapsible Layers box, mock-data adapter, pin placement script, shell and adapter tests; Report a problem with routing to City / councillor / BIA and its tests (KAN-35); requests from start to finish: rules for who can see and change, the record, Viewing as demo sign-in, My requests (Sprint 5); integration and README; Sprint 6: onboarding per user type, Viewing as for 10 user types, post to the map or send privately, spot on the map, photo, demo kept after refresh, "Me too" support, "Was it fixed?"; Sprint 7: Your profile and Settings, phone layout fix, final merge and demo script (KAN-50) |
-| Devu Babu Sheeja | Corridor map (MapLibre, OSM basemap), typed pins and clusters, layer toggles, selected-pin popup with issue steps, URL map state, map tests (KAN-7); business posts layer, BIA polls, ward outline, private requests kept off the map; school workspace and School safe routes map layer (KAN-43); roadwork impact for businesses (Sprint 6); status on request pins, "You said, we did", school requests to the City, School following Viewing as (KAN-47); Marketplace and expiring map posts (KAN-53) |
-| Mounika Boggarapu | Mock dataset, search, filter chips, result cards, search tests (KAN-9); owner and business profiles, responder profiles, profile fields table, resident interview guide (KAN-36); Community organization workspace with events, volunteer roles and members (KAN-42); ward polls (Sprint 6); community groups in Viewing as, requests to the City from a group, community events and library service changes on the map (KAN-48); Neighbr staff user type, event permits and the reported content queue (KAN-52) |
-| Bhavana Volati | User presence (Me / My business switch, "you are here" marker), place cards, activity cards with issue progress ring, Around you list, two-way card and pin linking (tasks 9–12); profile cards for resident, business and BIA connected to the map (avatar, "View full profile", "Raised by", BIA corridor highlight); accessibility check and fixes (`docs/accessibility-check.md`); resident home base and owner separated from business (KAN-37); organization workspace for City 311 and the BIA: work queue, staff actions, locked actions, councillor copies (Sprint 5); organizations as senders, councillor comments, notifications, due dates and overdue, moving requests between teams, Corridor pulse and board report, area alerts (Sprint 6); Chats with request chats, organization chats, block, report and "Who can message me" (KAN-51); card and profile tests |
+| Purab Singh Mohan | App shell and navigation, phone layout and bottom sheet, visual design (type, colours, street-directory result list, pins and popup), collapsible Layers box, mock-data adapter, pin placement script, shell and adapter tests; Report a problem with routing to City / councillor / BIA and its tests (KAN-35); requests from start to finish: rules for who can see and change, the record, Viewing as demo sign-in, My requests (Sprint 5); integration and README; Sprint 6: onboarding per user type, Viewing as for 10 user types, post to the map or send privately, spot on the map, photo, demo kept after refresh, "Me too" support, "Was it fixed?" |
+| Devu Babu Sheeja | Corridor map (MapLibre, OSM basemap), typed pins and clusters, layer toggles, selected-pin popup with issue steps, URL map state, map tests (KAN-7); business posts layer, BIA polls, ward outline, private requests kept off the map; school workspace and School safe routes map layer (KAN-43); roadwork impact for businesses (Sprint 6); status on request pins, "You said, we did", school requests to the City, School following Viewing as (KAN-47) |
+| Mounika Boggarapu | Mock dataset, search, filter chips, result cards, search tests (KAN-9); owner and business profiles, responder profiles, profile fields table, resident interview guide (KAN-36); Community organization workspace with events, volunteer roles and members (KAN-42); ward polls (Sprint 6); community groups in Viewing as, requests to the City from a group, community events and library service changes on the map (KAN-48) |
+| Bhavana Volati | User presence (Me / My business switch, "you are here" marker), place cards, activity cards with issue progress ring, Around you list, two-way card and pin linking (tasks 9–12); profile cards for resident, business and BIA connected to the map (avatar, "View full profile", "Raised by", BIA corridor highlight); accessibility check and fixes (`docs/accessibility-check.md`); resident home base and owner separated from business (KAN-37); organization workspace for City 311 and the BIA: work queue, staff actions, locked actions, councillor copies (Sprint 5); organizations as senders, councillor comments, notifications, due dates and overdue, moving requests between teams, Corridor pulse and board report, area alerts (Sprint 6); card and profile tests |
 
 ## Notes
 
 - **Why the filter chips and the Layers box show different counts:** the chips group items by what they are (Updates, Issues), while the map layers give roadworks their own **Roadwork** layer. So the sidewalk-work notice counts under the Updates chip but in the Roadwork layer, not Public updates.
 - **Private reports:** reports marked "private until approved" only appear (list, pins, cards) for the person who raised them. Switch between Me and My business to see the difference.
-- **The demo is saved in this browser** (Sprint 6): reports, requests, staff actions, notifications read and the person chosen in Viewing as survive a refresh. **Reset demo** in the Viewing as strip goes back to the sample data. With a real backend, `submitReport` and `actOnRequest` become API calls.
+- **The demo is saved in this browser** (Sprint 6): reports, requests, staff actions, notifications read and the person chosen in Viewing as survive a refresh. **Reset demo** in the yellow strip goes back to the sample data. With a real backend, `submitReport` and `actOnRequest` become API calls.
 
 - All names, places, events and coordinates are illustrative demo data.
 - Basemap: OpenFreeMap "Positron" (free, no API key, OpenStreetMap data). If it can't load, the map switches to standard OpenStreetMap tiles automatically.
